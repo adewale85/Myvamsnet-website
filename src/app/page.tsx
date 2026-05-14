@@ -3,9 +3,12 @@ import React from 'react'
 
 function page() {
   return (
-    <div>
+    <main>
+      <section className='relative min-h-screen bg-[url("/Hero_background.svg")] bg-cover bg-center bg-no-repeat'>
       <Navbar />
-    </div>
+      
+      </section>
+    </main>
   )
 }
 
