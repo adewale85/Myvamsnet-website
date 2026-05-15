@@ -18,7 +18,7 @@ function Navbar() {
   ];
 
   return (
-    <main className="Wrapper h-19.25 lg:my-12 my-0 relative">
+    <main className="Wrapper h-22 relative mb-12">
       <div className="Inner-wrapper flex items-center justify-between gap-6 h-full">
         <div className="lg:flex hidden items-center gap-2">
           <Image src="/myVamsnetLogo.svg" alt="logo" width={32} height={32} />
