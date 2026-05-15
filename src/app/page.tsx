@@ -5,10 +5,9 @@ import React from 'react'
 function page() {
   return (
     <main>
-      <section className='relative min-h-screen bg-[url("/Hero_background.svg")] bg-cover bg-center bg-no-repeat'>
+      <section className='relative min-h-screen  bg-[url("/Hero_background.svg")] bg-cover bg-center bg-no-repeat'>
       <Navbar />
       <HeroeSection />
-
       </section>
     </main>
   )
