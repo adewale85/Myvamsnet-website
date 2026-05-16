@@ -1,3 +1,4 @@
+import GrowthSection from '@/components/GrowthSection'
 import HeroeSection from '@/components/HeroeSection'
 import Navbar from '@/components/layout/Navbar'
 import React from 'react'
@@ -9,6 +10,7 @@ function page() {
       <Navbar />
       <HeroeSection />
       </section>
+      <GrowthSection />
     </main>
   )
 }
