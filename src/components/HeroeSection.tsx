@@ -3,7 +3,7 @@ import HeroeprojectNames from "./HeroeprojectNames";
 
 function HeroeSection() {
   return (
-    <section className="Inner-wrapper lg:py-12 py-0 gap-8">
+    <section className="Inner-wrapper lg:py-12 py-8 gap-8">
     
       <div className="flex flex-col gap-4 lg:gap-8 ">
         <h1 className="font-heading font-normal lg:text-[68px] text-[40px] lg:leading-[88px] leading-[1.1] text-white">
