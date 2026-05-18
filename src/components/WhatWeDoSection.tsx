@@ -35,9 +35,9 @@ const servicesData = [
 export default function WhatWeDoSection() {
   return (
     <section className="py-16 px-4 max-w-7xl Inner-wrapper space-y-6">
-      <header className="flex items-center justify-between gap-4">
-        <p className="text-[18px] font-normal leading-6 text-[#232B33] whitespace-nowrap">What We Do</p>
-        <div className="lg:w-[1048px] w-full h-1 bg-[#FFFFFF]"></div>
+      <header className="flex items-center justify-between lg:gap-4 gap-2">
+        <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33]">What We Do</p>
+        <div className="lg:w-262 w-60 h-1 bg-[#FFFFFF]"></div>
       </header>
 
       {/* Spacing between the rows matches the tighter Figma design blocks */}
@@ -49,23 +49,23 @@ export default function WhatWeDoSection() {
           return (
             <div 
               key={service.badge} 
-              className={`w-full bg-[#FFFFFF] rounded-[32px] overflow-hidden shadow-sm flex flex-col lg:items-center justify-between
-                ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}
+              className={`w-full bg-[#FFFFFF] rounded-[32px] overflow-hidden shadow-sm flex flex-col-reverse lg:items-center justify-between
+                ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row' }`}
             >
               {/* Content Block */}
               <div className="w-full lg:w-[600px] h-auto lg:h-[565px] flex items-center justify-center p-8 lg:p-0">
                 <div className="w-full lg:w-[504px] space-y-8 lg:space-y-12">
-                  <span className="font-normal text-[16px] leading-[100%] font-heading text-[#007FFF] tracking-wider block">
+                  <span className="font-normal lg:text-[16px] text-[12px] leading-[100%] font-heading text-[#007FFF] ">
                     {service.badge}
                   </span>
-                  <h3 className="font-bold text-[32px] lg:text-[48px] lg:leading-16 text-[#232B33]">
+                  <h3 className="font-bold text-[28px] lg:text-[48px] lg:leading-17 leading-10 text-[#232B33] pt-5">
                     {service.heading}
                   </h3>
-                  <p className="font-normal text-[16px] lg:text-[20px] leading-[28px] lg:leading-[36px]">
+                  <p className="font-normal text-[16px] lg:text-[20px] lg:leading-9 leading-8">
                     {service.description}
                   </p>
                   <Link href={service.btnLink} className="block">
-                    <button className="w-full h-[52px] font-bold text-[16px] rounded-xl text-[#007FFF] border border-[#007FFF] bg-white hover:bg-[#007FFF]/5 transition-colors">
+                    <button className="w-full h-[52px] font-bold text-[16px] rounded-xl text-[#007FFF] leading-[100%] border border-[#007FFF] bg-white hover:bg-[#007FFF] hover:text-brand-lime transition-colors">
                       {service.btnText}
                     </button>
                   </Link>
@@ -73,13 +73,13 @@ export default function WhatWeDoSection() {
               </div>
 
               {/* Image Block */}
-              <div className="w-full lg:w-[600px] h-[350px] lg:h-[565px] relative">
+              <div className="w-full lg:w-[600px] h-[300px] lg:h-[565px] relative">
                 <Image 
                   src={service.imgSrc} 
                   alt={service.imgAlt} 
                   fill
                   className="object-cover object-center"
-                  sizes="(max-w-1024px) 100vw, 600px"
+                  sizes="w-full lg:w-[600px] h-auto lg:h-[565px]"
                 />
               </div>
             </div>
