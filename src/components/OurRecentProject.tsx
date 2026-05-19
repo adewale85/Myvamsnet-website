@@ -9,7 +9,7 @@ function OurRecentProject() {
       description:
         "MyVamsnet is an impact-driven technology company delivering tech-enabled growth for individuals and businesses across Africa and beyond.",
       btnText: "View Project",
-      btnIcon: "/Btn.svg", // Added leading slash to make path relative to public folder
+      btnIcon: "/Btn.svg", 
       imgSrc: "/3trive_image.svg",
       imgAlt: "3trive Lab",
     },

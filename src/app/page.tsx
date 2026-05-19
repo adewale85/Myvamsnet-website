@@ -1,6 +1,7 @@
 import FAQ from '@/components/FAQ'
 import GrowthSection from '@/components/GrowthSection'
 import HeroeSection from '@/components/HeroeSection'
+import HowWeWork from '@/components/HowWeWork'
 import Navbar from '@/components/layout/Navbar'
 import OurRecentProject from '@/components/OurRecentProject'
 import WeBuild from '@/components/WeBuild'
@@ -26,6 +27,9 @@ function page() {
       </div>
       <div className='relative min-h-screen  bg-[url("/FAQBackground.svg")] bg-cover bg-center bg-no-repeat'>
         <FAQ />
+      </div>
+      <div className='relative min-h-screen bg-[url("/What_we_do_bg.svg")] bg-cover bg-center bg-no-repeat'>
+        <HowWeWork />
       </div>
     </main>
   )

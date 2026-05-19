@@ -44,7 +44,7 @@ function FAQ() {
       </header>
 
       {/* FIXED: Removed the hardcoded h-[748px] so the container can expand naturally when panels open */}
-      <div className="lg:w-228.25 w-full rounded-3xl bg-[#EEF6FF] flex flex-col p-8 gap-4">
+      <div className="lg:w-300 w-full rounded-3xl bg-[#EEF6FF] flex flex-col items-center justify-center p-8 gap-4">
         {faqData.map((faq, index) => {
           const isOpen = openIndex === index;
           return (
