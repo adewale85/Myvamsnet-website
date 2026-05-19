@@ -1,3 +1,4 @@
+import FAQ from '@/components/FAQ'
 import GrowthSection from '@/components/GrowthSection'
 import HeroeSection from '@/components/HeroeSection'
 import Navbar from '@/components/layout/Navbar'
@@ -22,6 +23,9 @@ function page() {
       </div>
       <div className='relative min-h-screen  bg-[url("/OurProject_image.svg")] bg-cover bg-center bg-no-repeat'>
         <OurRecentProject/>
+      </div>
+      <div className='relative min-h-screen  bg-[url("/FAQBackground.svg")] bg-cover bg-center bg-no-repeat'>
+        <FAQ />
       </div>
     </main>
   )
