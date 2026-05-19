@@ -72,7 +72,7 @@ export default function WhatWeDoSection() {
                 </div>
               </div>
 
-              {/* Image Block */}
+        
               <div className="w-full lg:w-[600px] h-[300px] lg:h-[565px] relative">
                 <Image 
                   src={service.imgSrc} 

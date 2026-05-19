@@ -19,7 +19,6 @@ function WeBuild() {
             Join our Team
           </button>
         </div>
- 
 </div>
 
     </section>
