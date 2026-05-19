@@ -86,23 +86,25 @@ function OurRecentProject() {
           </div>
         ))}
       </div>
-      <div className="w-[1200px] h-[214px] bg-brand-lime rounded-4xl border-4">
-        <div>
+      <div className="Inner-wrapper w-full lg:h-[214px] h-[567px] bg-brand-lime rounded-4xl border-4 border-[#FFFFFF] flex lg:flex-row flex-col items-center justify-center my-10">
+        <div className="flex lg:flex-row flex-col items-center justify-between gap-8 ">
           <Image
-            src="/Our_Recent_Project_Banner.svg"
+            src="/slot_image.svg"
             alt="Our Recent Project Banner"
-            width={1200}
-            height={214}
+            width={150}
+            height={150}
             className="rounded-4xl"
           />
-         <p className="w-[685px]"> 
+        <div>
+           <p className="lg:w-[685px] w-[286px] font-normal lg:text-[20px] text-[16px] leading-8 lg:text-left text-center  "> 
           You know exactly what your industry needs. So why isn't your product live yet? You're not afraid of the project. You're afraid of wasting time and money on something that won't work. 
          </p>
-         <div>
-          <h5>Only 4slots left</h5>
-          <button className="w-full h-[52px] font-bold text-[16px] rounded-xl text-[#007FFF] leading-[100%] border border-[#007FFF] bg-white hover:bg-[#007FFF] hover:text-brand-lime transition-colors">
-                      Book Clarity Call Now!
-                    </button>
+        </div>
+         <div className="w-59.25 flex flex-col items-center justify-center gap-2">
+          <h5 className="font-bold lg:text-[28px] text-[24px] leading-8 text-[#FF5369]">Only 4slots left</h5>
+          <button className="w-full h-[52px] font-normal text-[14px]  font-heading rounded-xl text-brand-lime leading-[100%] border border-[#007FFF] bg-[#007FFF] hover:bg-[#006fde] hover:text-white transition-colors">
+            Book Clarity Call Now!
+          </button>
          </div>
         </div>
       </div>
