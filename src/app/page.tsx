@@ -34,6 +34,9 @@ function page() {
       <div>
         <RecommendedForYou />
       </div>
+      <div className='relative min-h-[495px] bg-[radial-gradient(circle_at_center,#151B2F_0%,_#004C99_100%,_#004C99_100%)] bg-cover bg-center bg-no-repeat text-center flex items-center justify-center'>
+        <WeBuild />
+      </div>
     </main>
   )
 }

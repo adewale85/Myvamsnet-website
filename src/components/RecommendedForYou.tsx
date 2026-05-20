@@ -37,8 +37,9 @@ function RecommendedForYou() {
   ];
 
   return (
-   <section className="Inner-wrapper py-16 px-4">
-         <header className="flex items-center justify-between gap-6  mb-6">
+   <section className="">
+    <div className='Inner-wrapper py-20'>
+         <header className="flex items-center justify-between gap-6 mb-6">
            <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
              RECOMMENDED FOR YOU
            </p>
@@ -97,6 +98,7 @@ function RecommendedForYou() {
            ))}
          </div>
          
+         </div>
          <TrustedBy/>
        </section>
   )

@@ -35,8 +35,10 @@ const servicesData = [
 export default function WhatWeDoSection() {
   return (
     <section className="py-16 px-4 max-w-7xl Inner-wrapper space-y-6">
-      <header className="flex items-center justify-between lg:gap-4 gap-2">
-        <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33]">What We Do</p>
+      <header className="flex items-center justify-between gap-6  mb-6">
+        <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
+          WHAT WE DO
+        </p>
         <div className="lg:w-262 w-60 h-1 bg-[#FFFFFF]"></div>
       </header>
 
