@@ -1,4 +1,5 @@
 import FAQ from '@/components/FAQ'
+import Footer from '@/components/Footer'
 import GrowthSection from '@/components/GrowthSection'
 import HeroeSection from '@/components/HeroeSection'
 import HowWeWork from '@/components/HowWeWork'
@@ -42,7 +43,7 @@ function page() {
       <div>
      <Image src="/Lastimage.svg" alt="We Build Image" width={1940} height={514} className='lg:block hidden'/>
    </div>
-      
+      <Footer/>
     </main>
   )
 }
