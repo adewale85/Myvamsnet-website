@@ -1,4 +1,7 @@
 import Image from "next/image";
+import ReadyToGrow from "./ReadyToGrow";
+import HeroeCard from "./HeroeCard";
+import Testimonies from "./Testimonies";
 
 function HowWeWork() {
   const HowWeWorkData = [
@@ -22,7 +25,7 @@ function HowWeWork() {
     },
   ];
   return (
-    <section className="Inner-wrapper py-16">
+    <section className="Inner-wrapper py-22 items-center justify-center ">
       <header className="flex items-center justify-between gap-6  mb-6">
         <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
           HOW WE WORK
@@ -52,6 +55,8 @@ function HowWeWork() {
         ))}
       </div>
       <ReadyToGrow />
+      <HeroeCard />
+      <Testimonies />
     </section>
   );
 }
