@@ -10,12 +10,12 @@ function ReadyToGrow() {
         </p>
         <div className="lg:w-262 w-60 h-1 bg-[#FFFFFF]"></div>
       </header>
-      <div className="w-300 h-116 bg-[#014C99] rounded-4xl flex items-center justify-between relative lg:flex-row flex-col p-8">
-        <div className="w-117.25 items-center flex-col space-y-8 ">
-          <h2 className=" font-bold text-[48px] leading-17 text-[#FFFFFF] ">
+      <div className="w-full lg:h-116 h-[568px] bg-[#014C99] rounded-4xl flex items-center justify-between relative lg:flex-row flex-col-reverse lg:gap-12 gap-6 lg:p-8 p-6" >
+        <div className="lg:w-117.25 w-full items-center justify-center flex-col lg:space-y-8 space-y-4 ">
+          <h2 className=" font-bold lg:text-[48px] text-[28px] lg:leading-17 leading-[40px] lg:text-left text-center text-[#FFFFFF] ">
             So Why Wait??? Start Your Journey To Success Now!
             </h2>
-            <p className="font-normal text-[20px] leading-9 text-[#FFFFFFBF]">
+            <p className="lg:w-full w-[255px] font-normal lg:text-[20px] lg:text-left text-center text-[16px] leading-9 text-[#FFFFFFBF]">
               We can’t wait to walk with you on this journey
             </p>
           
@@ -24,7 +24,8 @@ function ReadyToGrow() {
           </button>
         </div>
         <div>
-            <Image src="/ReadyToGrow_image.svg" alt="Ready To Grow" width={580} height={424} className=" "/>
+            <Image src="/ReadyToGrow_image.svg" alt="Ready To Grow" width={580} height={424} className="lg:block hidden"/>
+            <Image src="/ReadyToGrow_image.svg" alt="Ready To Grow" width={303} height={228} className="lg:hidden"/>
         </div>
       </div>
     </section>

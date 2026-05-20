@@ -35,7 +35,7 @@ function Testimonies() {
           key={id}
           className="bg-[#EEF6FF] lg:w-[380px] w-full h-[324px] rounded-b-4xl border-2 border-[#FFFFFF] rounded-3xl flex items-center justify-center"
         >
-          <div className="w-[316px] h-[260px] space-y-6 flex-col items-center justify-center">
+          <div className="w-[316px] h-[260px] space-y-6 flex-col items-center justify-between">
             <div className="flex gap-2 text-amber-500">
               {Array.from({ length: data.stars }).map((_, index) => (
                 <span key={index}>

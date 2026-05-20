@@ -4,9 +4,9 @@ import HeroeSection from '@/components/HeroeSection'
 import HowWeWork from '@/components/HowWeWork'
 import Navbar from '@/components/layout/Navbar'
 import OurRecentProject from '@/components/OurRecentProject'
+import RecommendedForYou from '@/components/RecommendedForYou'
 import WeBuild from '@/components/WeBuild'
 import WhatWeDoSection from '@/components/WhatWeDoSection'
-import React from 'react'
 
 function page() {
   return (
@@ -30,6 +30,9 @@ function page() {
       </div>
       <div className='relative min-h-screen bg-[url("/What_we_do_bg.svg")] bg-cover bg-center bg-no-repeat'>
         <HowWeWork />
+      </div>
+      <div>
+        <RecommendedForYou />
       </div>
     </main>
   )

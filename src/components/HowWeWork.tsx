@@ -32,7 +32,7 @@ function HowWeWork() {
         </p>
         <div className="lg:w-262 w-60 h-1 bg-[#FFFFFF]"></div>
       </header>
-      <div className="flex gap-9">
+      <div className="flex lg:flex-row flex-col gap-9">
         {HowWeWorkData.map((data, id) => (
           <div key={id} className="relative ">
             <Image
@@ -40,16 +40,31 @@ function HowWeWork() {
               alt={data.imgAlt}
               width={376}
               height={306}
-              className="relative rounded-3xl"
+              className="relative rounded-3xl lg:block hidden"
             />
-            <button className="absolute bottom-0 left-0 w-[365.33px] h-21 bg-[radial-gradient(circle_at_center,#007FFF_0%,_#004C99_90%,_#004C99_100%)] rounded-3xl items-center justify-left pl-6 flex gap-2">
+            <Image
+              src={data.imgSrc}
+              alt={data.imgAlt}
+              width={343}
+              height={306}
+              className="relative rounded-3xl lg:hidden"
+            />
+            <button className="absolute bottom-0 left-0 lg:w-[365.33px] w-[343px] lg:h-21 h-[60px] bg-[radial-gradient(circle_at_center,#007FFF_0%,_#004C99_90%,_#004C99_100%)] rounded-3xl items-center justify-left pl-6 flex gap-2">
               <Image
                 src={data.btnIcon}
                 alt="Button Icon"
                 width={24}
                 height={24}
+                className="lg:block hidden"
               />
-              <span className="font-bold text-[20px] leading-9 text-[#FFFFFF]">{data.btnText}</span>
+              <Image
+                src={data.btnIcon}
+                alt="Button Icon"
+                width={20}
+                height={20}
+                className="lg:hidden"
+              />
+              <span className="font-bold lg:text-[20px] text-[16px] leading-9 text-[#FFFFFF]">{data.btnText}</span>
             </button>
           </div>
         ))}

@@ -46,7 +46,7 @@ function OurRecentProject() {
         {ProjectData.map((Project, id) => (
           <div
             key={id}
-            className="lg:w-94 w-[343px] lg:h-[571px] h-[527px] bg-blue-500 rounded-3xl overflow-hidden flex flex-col lg:space-y-3 space-y-6 items-center"
+            className="lg:w-94 w-[343px] lg:h-[571px] h-[527px] bg-[radial-gradient(circle_at_center,#007FFF_0%,_#004C99_90%,_#004C99_100%)] rounded-3xl overflow-hidden flex flex-col lg:space-y-3 space-y-6 items-center"
           >
             {/* Image Container */}
             <div className="w-full h-[259px] relative rounded-xl overflow-hidden">
