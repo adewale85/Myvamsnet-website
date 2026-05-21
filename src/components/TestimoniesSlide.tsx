@@ -15,7 +15,7 @@ function TestimoniesSlide() {
     ]
 const duplicatedCards = [...cardData, ...cardData];
   return (
-   <div className="overflow-hidden w-full py-10">
+   <div className="overflow-hidden w-full ">
       <motion.div
         className="flex w-max gap-6 cursor-pointer"
         style={{ willChange: "transform" }}

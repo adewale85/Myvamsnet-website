@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import TrustedBy from './TrustedBy';
 
 function RecommendedForYou() {
      const ProjectData = [
@@ -38,22 +37,22 @@ function RecommendedForYou() {
 
   return (
    <section className="">
-    <div className='Inner-wrapper py-20'>
-         <header className="flex items-center justify-between gap-6 mb-6">
-           <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
-             RECOMMENDED FOR YOU
-           </p>
-           <div className="lg:w-262 w-60 h-1 bg-[#EEF6FF]"></div>
-         </header>
+    <div className='Inner-wrapper'>
+         <header className="flex items-center justify-between gap-6 mb-4">
+        <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
+          RECOMMENDED FOR YOU
+        </p>
+        <div className="lg:w-262 w-full h-1 bg-[#EEF6FF]"></div>
+      </header>
    
-         <div className="flex flex-col lg:flex-row lg:gap-8 gap-4 mb-12">
+         <div className="flex flex-col lg:flex-row items-center justify-between lg:gap-8 gap-4 ">
            {ProjectData.map((Project, id) => (
              <div
                key={id}
-               className="lg:w-94 w-[343px] lg:h-[571px] h-[527px] bg-[radial-gradient(circle_at_center,#007FFF_0%,_#004C99_90%,_#004C99_100%)] rounded-3xl overflow-hidden flex flex-col lg:space-y-3 space-y-2 items-center"
+               className="lg:w-94 w-[343px] lg:h-[571px] h-[563px] bg-[radial-gradient(circle_at_center,#007FFF_0%,_#004C99_90%,_#004C99_100%)] rounded-3xl overflow-hidden flex flex-col  items-center justify-between"
              >
                {/* Image Container */}
-               <div className="w-[376px] h-[259px] relative rounded-xl overflow-hidden">
+               <div className="lg:w-[376px]  w-[343px] h-[259px] relative rounded-xl overflow-hidden">
                  <Image
                    src={Project.imgSrc}
                    alt={Project.imgAlt}
@@ -71,7 +70,7 @@ function RecommendedForYou() {
                </div>
    
                {/* Text & Action Content */}
-               <div className=" flex flex-col items-center justify-center lg:w-75 w-[293px]  lg:space-y-4 space-y-6 ">
+               <div className=" flex flex-col items-center justify-center lg:w-75 w-[293px]  lg:space-y-4 py-6 space-y-6 ">
                  <div className="lg:space-y-4 space-y-6 lg:w-[312px] w-full">
                    <p className="font-bold lg:text-[20px] text-[16px] leading-9 text-[#FFFFFF]">
                      {Project.badge}
@@ -99,7 +98,7 @@ function RecommendedForYou() {
          </div>
          
          </div>
-         <TrustedBy/>
+        
        </section>
   )
 }

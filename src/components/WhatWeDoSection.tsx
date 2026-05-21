@@ -9,7 +9,7 @@ const servicesData = [
     description: "We build web apps, mobile apps, custom software, and AI-powered solutions that solve real problems.",
     btnText: "Start a Project",
     btnLink: "/contact",
-    imgSrc: "/traning_image.svg", // Double check if this should be dashboard_image or similar later!
+    imgSrc: "/ProductInovation_image.svg", 
     imgAlt: "Analytics dashboard showing tech solution metrics"
   },
   {
@@ -35,15 +35,15 @@ const servicesData = [
 export default function WhatWeDoSection() {
   return (
     <section className="py-16 px-4 max-w-7xl Inner-wrapper space-y-6">
-      <header className="flex items-center justify-between gap-6  mb-6">
+      <header className="flex items-center justify-between gap-6 mb-4">
         <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
           WHAT WE DO
         </p>
-        <div className="lg:w-262 w-60 h-1 bg-[#FFFFFF]"></div>
+        <div className="lg:w-262 w-full h-1 bg-[#FFFFFF]"></div>
       </header>
 
       {/* Spacing between the rows matches the tighter Figma design blocks */}
-      <div className="space-y-12 lg:space-y-8">
+      <div className="space-y-5 lg:space-y-12">
         {servicesData.map((service, index) => {
           // If index is odd (1), it returns true. This flips the middle card.
           const isReversed = index % 2 !== 0;
@@ -57,17 +57,17 @@ export default function WhatWeDoSection() {
               {/* Content Block */}
               <div className="w-full lg:w-[600px] h-auto lg:h-[565px] flex items-center justify-center p-8 lg:p-0">
                 <div className="w-full lg:w-[504px] space-y-8 lg:space-y-12">
-                  <span className="font-normal lg:text-[16px] text-[12px] leading-[100%] font-heading text-[#007FFF] ">
+                  <span className="font-normal lg:text-[16px] text-[12px] leading-[100%] font-heading text-[#007FFF] w-[175px] h-[30px] bg-[#EEF6FF] rounded-full px-4 py-2">
                     {service.badge}
                   </span>
                   <h3 className="font-bold text-[28px] lg:text-[48px] lg:leading-17 leading-10 text-[#232B33] pt-5">
                     {service.heading}
                   </h3>
-                  <p className="font-normal text-[16px] lg:text-[20px] lg:leading-9 leading-8">
+                  <p className="font-normal text-[16px] text-[#232B33BF] lg:text-[20px] lg:leading-9 leading-8">
                     {service.description}
                   </p>
                   <Link href={service.btnLink} className="block">
-                    <button className="w-full h-[52px] font-bold text-[16px] rounded-xl text-[#007FFF] leading-[100%] border border-[#007FFF] bg-white hover:bg-[#007FFF] hover:text-brand-lime transition-colors">
+                    <button className="w-full h-[52px]  font-bold text-[16px] rounded-xl text-[#007FFF] leading-[100%] border border-[#007FFF] bg-white hover:bg-[#007FFF] hover:text-brand-lime transition-colors ">
                       {service.btnText}
                     </button>
                   </Link>

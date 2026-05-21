@@ -34,15 +34,15 @@ function OurRecentProject() {
   ];
 
   return (
-    <section className="Inner-wrapper py-16 px-4">
-      <header className="flex items-center justify-between gap-6  mb-6">
+    <section className=" space-y-8 ">
+       <header className="flex items-center justify-between gap-6 mb-4">
         <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
-          OUR RECENT PROJECTS
+         OUR RECENT PROJECTS
         </p>
-        <div className="lg:w-262 w-60 h-1 bg-[#FFFFFF]"></div>
+        <div className=" w-full h-1 bg-[#FFFFFF]"></div>
       </header>
 
-      <div className="flex flex-col lg:flex-row lg:gap-8 gap-4 ">
+      <div className="flex flex-col lg:flex-row lg:gap-8 gap-6 items-center justify-center">
         {ProjectData.map((Project, id) => (
           <div
             key={id}
@@ -86,7 +86,7 @@ function OurRecentProject() {
           </div>
         ))}
       </div>
-      <div className="Inner-wrapper w-full lg:h-[214px] h-[567px] bg-brand-lime rounded-4xl border-4 border-[#FFFFFF] flex lg:flex-row flex-col items-center justify-center my-10">
+      <div className="Inner-wrapper w-full lg:h-[214px] h-[567px] bg-brand-lime rounded-4xl border-4 border-[#FFFFFF] flex lg:flex-row flex-col items-center justify-center ">
         <div className="flex lg:flex-row flex-col items-center justify-between gap-8 ">
           <Image
             src="/slot_image.svg"

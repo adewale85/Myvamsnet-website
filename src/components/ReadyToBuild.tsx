@@ -5,9 +5,9 @@ function ReadyToBuild() {
   return (
       <section >
     <div className='Inner-wrapper flex lg:flex-row flex-col items-center justify-center'>
-      <div className=' lg:w-[893px] w-[327px] lg:space-y-10  flex flex-col items-center justify-center'> 
+      <div className=' lg:w-[893px] w-[327px] lg:space-y-10 space-y-9  flex flex-col items-center justify-center'> 
       
-     <div className='lg:w-[918px] w-full flex flex-col items-center justify-center space-y-4 '>
+     <div className='lg:w-[918px] w-[235px] flex flex-col items-center justify-center space-y-4 '>
       <h2 className=' lg:text-[58px] text-[32px] lg:font-bold font-normal text-center text-[#FFFFFF] lg:leading-20 leading-12.5 font-heading'>Ready to Build, Grow, or Scale?</h2>
       <p className='lg:w-[587px] w-[279px] text-center font-normal lg:text-[20px] text-[14px] lg:leading-9  text-[#FFFFFFCC]'>We help you move forward with clarity and confidence.</p>
       </div>  

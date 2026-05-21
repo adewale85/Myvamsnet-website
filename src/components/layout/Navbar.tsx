@@ -18,15 +18,10 @@ function Navbar() {
   ];
 
   return (
-    <main className="Wrapper h-22 relative mb-12">
+    <main className=" h-22 relative lg:mb-6 mb-0">
       <div className="Inner-wrapper flex items-center justify-between gap-6 h-full">
-        <div className="lg:flex hidden items-center gap-2">
-          <Image src="/myVamsnetLogo.svg" alt="logo" width={32} height={32} />
-
-          <h1 className=" font-normal text-2xl tracking-[4%] leading-[100%] font-heading text-white">
-            MyVamsnet
-          </h1>
-        </div>
+        
+          <Image src="/MyVamsnet_Logo.svg" alt="logo" width={190} height={32} />
 
         {/* Desktop menu */}
         <ul className="items-center justify-center list-none gap-10 text-[16px] font-normal text-white leading-[100%] lg:flex hidden">
@@ -49,17 +44,11 @@ function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        <div className="flex justify-between w-full lg:hidden ">
-          <div className="flex items-center gap-2">
-            <Image src="myVamsnetLogo.svg" alt="logo" width={24} height={24} />
-
-            <h1 className="lg:hidden flex font-normal text-[18.29px] tracking-[4%] leading-[100%] font-heading text-white">
-              MyVamsnet
-            </h1>
-          </div>
+       
+         
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="flex items-center justify-center"
+            className="flex items-center justify-center lg:hidden"
           >
             {isOpen ? (
               <FaXmark className="text-white" />
@@ -82,7 +71,7 @@ function Navbar() {
             </div>
           )}
         </div>
-      </div>
+     
     </main>
   );
 }

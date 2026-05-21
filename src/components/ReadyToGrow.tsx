@@ -3,12 +3,12 @@ import React from "react";
 
 function ReadyToGrow() {
   return (
-    <section className="Inner-wrapper py-16 mt-16">
-      <header className="flex items-center justify-between gap-6  mb-6">
+    <section className="Inner-wrapper">
+      <header className="flex items-center justify-between gap-6 mb-6">
         <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
           READY TO GROW WITH US?
         </p>
-        <div className="lg:w-262 w-60 h-1 bg-[#FFFFFF]"></div>
+        <div className=" w-full h-1 bg-[#FFFFFF]"></div>
       </header>
       <div className="w-full lg:h-116 h-[568px] bg-[#014C99] rounded-4xl flex items-center justify-between relative lg:flex-row flex-col-reverse lg:gap-12 gap-6 lg:p-8 p-6" >
         <div className="lg:w-117.25 w-full items-center justify-center flex-col lg:space-y-8 space-y-4 ">

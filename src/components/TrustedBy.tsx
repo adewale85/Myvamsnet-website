@@ -2,8 +2,8 @@
 function TrustedBy() {
     const trustedByData = [ "Trusted by:", "Eliad Investment", "SEI Africa", "AngyCare UK", "3trive Lab" ]
   return (
-    <div>
-        <div className='flex items-center justify-center gap-[123px] bg-[#C7FF01] w-full h-[137px]
+    
+        <div className='flex  lg:flex-row flex-col items-center justify-center gap-[123px] bg-[#C7FF01] w-full lg:h-[137px] h-[100px]
 
 ]'>
             {trustedByData.map((data, id) => (
@@ -12,7 +12,7 @@ function TrustedBy() {
                 </div>
             ))}
         </div>
-    </div>
+   
   )
 }
 
