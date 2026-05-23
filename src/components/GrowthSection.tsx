@@ -1,6 +1,7 @@
-import Image from "next/image";
-import React from "react";
+"use client";
 
+import Image from "next/image";
+import { motion } from "framer-motion";
 export default function GrowthSection() {
   return (
     <div className="Inner-wrapper flex lg:flex-row flex-col gap-12 lg:gap-24 py-20 px-4 lg:px-0 ">
@@ -13,15 +14,27 @@ export default function GrowthSection() {
           height={576}
           className=""
         />
-        <div className="absolute bottom-10 left-30">
+
+      <motion.div
+      className="absolute bottom-10 left-30 z-10"
+        animate={{
+          x: [0, 50, 0], 
+        }}
+        transition={{
+          duration: 1,       
+          repeat: Infinity,    
+          ease: "easeInOut"    
+        }}
+        >
+      
           <Image
             src="/GrowthArrow.svg"
             alt="Arrow_icon"
             width={126}
             height={126}
             className=""
-          />
-        </div>
+          /> 
+</motion.div>
       </div>
 
       {/* Middle Text Container - FIXED: Changed h-[576px] to lg:h-[576px] h-auto */}
