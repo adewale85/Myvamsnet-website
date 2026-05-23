@@ -34,7 +34,7 @@ const FOOTER_DATA = [
 export default function Footer() {
   return (
     <footer className="bg-[radial-gradient(circle_at_center,#151B2F_0%,_#004C99_100%,_#004C99_100%)] text-white py-16 px-6 lg:px-16 border-t border-white/10">
-      <div className="Wrapper max-w-7xl mx-auto">
+      <div className="Inner-wrapper">
         
         {/* Mobile: 2-column Grid | Desktop: Balanced Custom Flex Row */}
         <div className="grid grid-cols-2 lg:flex lg:flex-row lg:justify-between gap-12 lg:gap-0 mb-16">
@@ -71,7 +71,7 @@ export default function Footer() {
               </div>
                
               {item.subtitle && ( 
-                <p className="font-normal text-[16px] leading-7 text-[#FFFFFFBF]">
+                <p className="font-normal text-[16px] leading-7 text-[#FFFFFFBF] w-[425px]">
                   {item.subtitle}
                 </p>
               )}

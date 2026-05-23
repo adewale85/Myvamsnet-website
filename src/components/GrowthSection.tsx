@@ -1,14 +1,26 @@
+import Image from "next/image";
 import React from "react";
 
 export default function GrowthSection() {
   return (
-    <div className="Inner-wrapper flex lg:flex-row flex-col gap-12 lg:gap-24 py-20 px-4 lg:px-0">
-      
+    <div className="Inner-wrapper flex lg:flex-row flex-col gap-12 lg:gap-24 py-20 px-4 lg:px-0 ">
       {/* Desktop Left Decorative Box */}
-      <div className="lg:w-72.75 w-full h-144 bg-[#EEF6FF] rounded-tl-4xl hidden rounded-bl-4xl lg:flex gap-55 flex-col items-center justify-center">
-        <div className="flex flex-col items-end justify-between h-full my-20">
-          <div className="w-51.75 h-14.5 bg-brand-lime rounded-l-12"></div>
-          <div className="w-51.75 h-14.5 bg-brand-lime rounded-l-12"></div>
+      <div className="w-[291px] h-[576px] hidden lg:flex relative ">
+        <Image
+          src="/grow_image2.svg"
+          alt="Ready To Grow"
+          width={291}
+          height={576}
+          className=""
+        />
+        <div className="absolute bottom-10 left-30">
+          <Image
+            src="/GrowthArrow.svg"
+            alt="Arrow_icon"
+            width={126}
+            height={126}
+            className=""
+          />
         </div>
       </div>
 
@@ -22,7 +34,7 @@ export default function GrowthSection() {
           lack of potential, but lack of the right structure, tools, and
           guidance.
         </p>
-        <p className="font-normal text-[16px] sm:text-[20px] leading-relaxed lg:leading-9">
+        <p className="font-normal text-[16px] lg:text-[20px] leading-relaxed lg:leading-9">
           Opportunities disappears, direction is vague. execution is unclear,
           and growth feels harder.
         </p>
@@ -41,30 +53,25 @@ export default function GrowthSection() {
       </div>
 
       {/* Desktop Right Decorative Box */}
-      <div className="lg:w-72.75 w-full h-144 bg-[#EEF6FF] rounded-tr-4xl rounded-br-4xl lg:flex hidden gap-55 flex-col">
-        <div className="flex flex-col items-end justify-between h-full my-20">
-          <div className="w-51.75 h-14.5 bg-brand-lime rounded-r-12"></div>
-          <div className="w-51.75 h-14.5 bg-brand-lime rounded-r-12"></div>
-        </div>
+      <div className="w-[291px] h-[576px] hidden lg:flex ">
+        <Image
+          src="/grow_image1.svg"
+          alt="Ready To Grow"
+          width={291}
+          height={576}
+          className="lg:block hidden"
+        />
       </div>
 
-      {/* Mobile Only Section - FIXED: Corrected w-[165.5px] syntax and layout spacing */}
-      <div className="flex lg:hidden gap-4 w-full justify-center items-center ">
-        <div className="w-[165.5px] h-82.75 bg-[#EEF6FF] rounded-tl-4xl rounded-bl-4xl flex gap-55 flex-col">
-          <div className="flex flex-col items-end justify-between h-full my-20">
-            <div className="w-30.75 h-10 bg-brand-lime rounded-l-12"></div>
-            <div className="w-30.75 h-10 bg-brand-lime rounded-l-12"></div>
-          </div>
-        </div>
-
-        <div className="w-[165.5px] h-82.75 bg-[#EEF6FF] rounded-tr-4xl rounded-br-4xl flex gap-55 flex-col">
-          <div className="flex flex-col items-end justify-between h-full my-20">
-            <div className="w-30.75 h-10 bg-brand-lime rounded-r-12"></div>
-            <div className="w-30.75 h-10 bg-brand-lime rounded-r-12"></div>
-          </div>
-        </div>
+      <div className="flex lg:hidden w-full h-auto justify-between items-center ">
+        <Image
+          src="/growth_mobile.svg"
+          alt="Ready To Grow"
+          width={343}
+          height={242}
+          className=""
+        />
       </div>
-
     </div>
   );
 }

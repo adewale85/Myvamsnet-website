@@ -1,6 +1,5 @@
 import Image from "next/image";
 import ReadyToGrow from "./ReadyToGrow";
-import HeroeCard from "./HeroeCard";
 import Testimonies from "./Testimonies";
 
 function HowWeWork() {
@@ -28,8 +27,8 @@ function HowWeWork() {
   return (
     <>
       {/* SECTION 1: Locked safely inside its own wrapper boundaries */}
-      <section className="lg:pt-0 pt-12 block w-full items-center justify-center">
-        <header className="Inner-wrapper flex items-center justify-between  mb-4">
+      <section className="py-12 lg:mt-0 mt-12 block w-full items-center justify-center">
+        <header className="Inner-wrapper flex items-center justify-between gap-6 mb-6">
           <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
             HOW WE WORK
           </p>
@@ -77,11 +76,11 @@ function HowWeWork() {
             ))}
           </div>
           
-          <div className="mb-2 lg:mb-0">
+          <div className="lg:py-0 py-8">
             <ReadyToGrow />
           </div>
         </div>
-        <div className="w-full lg:mt-8 mt-4">
+        <div className="w-full lg:mb-0 lg:mt-12 mt-0 mb-4">
         <Testimonies />
       </div>
       </section>

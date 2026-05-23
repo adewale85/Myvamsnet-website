@@ -35,7 +35,7 @@ const servicesData = [
 export default function WhatWeDoSection() {
   return (
     <section className="py-16 px-4 max-w-7xl Inner-wrapper space-y-6">
-      <header className="flex items-center justify-between gap-6 mb-4">
+      <header className="flex items-center justify-between gap-6 mb-8">
         <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
           WHAT WE DO
         </p>
@@ -67,7 +67,7 @@ export default function WhatWeDoSection() {
                     {service.description}
                   </p>
                   <Link href={service.btnLink} className="block">
-                    <button className="w-full h-[52px]  font-bold text-[16px] rounded-xl text-[#007FFF] leading-[100%] border border-[#007FFF] bg-white hover:bg-[#007FFF] hover:text-brand-lime transition-colors ">
+                    <button className="w-full h-[52px]  font-bold text-[16px] rounded-xl lg:text-[#007FFF]  text-brand-lime leading-[100%] border border-[#007FFF] lg:bg-white bg-[#007FFF] hover:bg-[#007FFF] lg:hover:text-brand-lime transition-colors ">
                       {service.btnText}
                     </button>
                   </Link>

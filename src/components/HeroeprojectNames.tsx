@@ -18,7 +18,7 @@ function HeroeprojectNames() {
     <div className="overflow-hidden w-full">
       <motion.div
         className="flex items-center justify-between gap-12 "
-        animate={{ x: ["0%", "-50%"] }}
+        animate={{ x: ["0%", "50%"] }}
         transition={{
           repeat: Infinity,
           duration: 20, 

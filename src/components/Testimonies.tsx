@@ -55,9 +55,7 @@ function Testimonies() {
         onTouchEnd={() => setIsPaused(false)}
       >
         {duplicatedData.map((data, id) => (
-          /* FIX: Changed `w-full` to `w-[343px]` on mobile. 
-            Framer Motion needs explicit widths on individual loop elements to calculate the "-50%" shift track correctly!
-          */
+        
           <div
             key={id}
             className="bg-[#FFFFFF] lg:w-[380px] w-[343px] h-[324px] rounded-b-4xl border-2 border-[#FFFFFF] rounded-3xl flex flex-shrink-0 items-center justify-center"
