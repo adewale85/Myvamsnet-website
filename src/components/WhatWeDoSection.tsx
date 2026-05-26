@@ -1,6 +1,10 @@
 // WhatWeDoSection.jsx
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { staggerContainer, fadeInUp, slideInDirection } from "@/utils/animations";
 
 const servicesData = [
   {
@@ -35,47 +39,89 @@ const servicesData = [
 export default function WhatWeDoSection() {
   return (
     <section className="py-16 px-4 max-w-7xl Inner-wrapper space-y-6">
-      <header className="flex items-center justify-between gap-6 mb-8">
+      <header className="sticky top-22 z-40 pt-8 pb-12 flex items-center justify-between gap-6 mb-8">
         <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
           WHAT WE DO
         </p>
         <div className="lg:w-262 w-full h-1 bg-[#FFFFFF]"></div>
       </header>
 
-      {/* Spacing between the rows matches the tighter Figma design blocks */}
-      <div className="space-y-5 lg:space-y-12">
+      {/* CRITICAL STACKING CONTAINER:
+        No `space-y` classes here! The padding-bottom creates room for cards to layer natively.
+      */}
+      <div className="relative space-y-30 py-6">
         {servicesData.map((service, index) => {
-          // If index is odd (1), it returns true. This flips the middle card.
           const isReversed = index % 2 !== 0;
-
+          
+         
           return (
-            <div 
+            <motion.div 
               key={service.badge} 
-              className={`w-full bg-[#FFFFFF] rounded-[32px] overflow-hidden shadow-sm flex flex-col-reverse lg:items-center justify-between
-                ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row' }`}
-            >
-              {/* Content Block */}
-              <div className="w-full lg:w-[600px] h-auto lg:h-[565px] flex items-center justify-center p-8 lg:p-0">
-                <div className="w-full lg:w-[504px] space-y-8 lg:space-y-12">
-                  <span className="font-normal lg:text-[16px] text-[12px] leading-[100%] font-heading text-[#007FFF] w-[175px] h-[30px] bg-[#EEF6FF] rounded-full px-4 py-2">
-                    {service.badge}
-                  </span>
-                  <h3 className="font-bold text-[28px] lg:text-[48px] lg:leading-17 leading-10 text-[#232B33] pt-5">
-                    {service.heading}
-                  </h3>
-                  <p className="font-normal text-[16px] text-[#232B33BF] lg:text-[20px] lg:leading-9 leading-8">
-                    {service.description}
-                  </p>
-                  <Link href={service.btnLink} className="block">
-                    <button className="w-full h-[52px]  font-bold text-[16px] rounded-xl lg:text-[#007FFF]  text-brand-lime leading-[100%] border border-[#007FFF] lg:bg-white bg-[#007FFF] hover:bg-[#007FFF] lg:hover:text-brand-lime transition-colors ">
-                      {service.btnText}
-                    </button>
-                  </Link>
-                </div>
-              </div>
+              className={`w-full bg-[#FFFFFF] rounded-[32px] overflow-hidden shadow-xl flex flex-col-reverse lg:items-center justify-between border border-black/5
+                sticky ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row' }`}
+              style={{
+                top: "200px", 
+                zIndex: 40 + index, // Adjusts where cards stack relative to your sticky navbar
+              }}
+              
+              // Smooth initial viewport entrance as a card comes up from the bottom
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, margin: "-50px" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
 
-        
-              <div className="w-full lg:w-[600px] h-[300px] lg:h-[565px] relative">
+              // Interaction: Slight scale up when mouse targets a specific layer
+              whileHover={{ 
+                scale: 1.005,
+                borderColor: "rgba(0, 127, 255, 0.2)",
+              }}
+            >
+              
+              {/* Content Block Wrapper */}
+              <motion.div
+                variants={staggerContainer(0.12, 0.1)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false }}
+                className="w-full lg:w-[600px] h-auto lg:h-[565px] flex items-center justify-center p-8 lg:p-0 bg-white"
+              >
+                <div className="w-full lg:w-[504px] space-y-8 lg:space-y-12">
+                  <motion.div variants={fadeInUp(15, 0.5)} className="inline-block">
+                    <span className="font-normal lg:text-[16px] text-[12px] leading-[100%] font-heading text-[#007FFF] bg-[#EEF6FF] rounded-full px-4 py-2">
+                      {service.badge}
+                    </span>
+                  </motion.div>
+
+                  <motion.h3 variants={fadeInUp(20, 0.5)} className="font-bold text-[28px] lg:text-[48px] lg:leading-17 leading-10 text-[#232B33] pt-5">
+                    {service.heading}
+                  </motion.h3>
+
+                  <motion.p variants={fadeInUp(15, 0.5)} className="font-normal text-[16px] text-[#232B33BF] lg:text-[20px] lg:leading-9 leading-8">
+                    {service.description}
+                  </motion.p>
+
+                  <motion.div variants={fadeInUp(10, 0.4)}>
+                    <Link href={service.btnLink} className="block">
+                      <motion.button 
+                        className="w-full h-[52px] font-bold text-[16px] rounded-xl lg:text-[#007FFF] text-brand-lime leading-[100%] border border-[#007FFF] bg-[#007FFF] transition-colors"
+                        whileHover={{ scale: 1.02, backgroundColor: "#007FFF", color: "#C7FF01" }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        {service.btnText}
+                      </motion.button>
+                    </Link>
+                  </motion.div>
+                </div>
+              </motion.div>
+              
+              {/* Image Block Wrapper */}
+              <motion.div 
+                className="w-full lg:w-[600px] h-[300px] lg:h-[565px] relative overflow-hidden"
+                variants={slideInDirection(isReversed, 35, 0.6, 0.15)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false }}
+              >
                 <Image 
                   src={service.imgSrc} 
                   alt={service.imgAlt} 
@@ -83,8 +129,9 @@ export default function WhatWeDoSection() {
                   className="object-cover object-center"
                   sizes="w-full lg:w-[600px] h-auto lg:h-[565px]"
                 />
-              </div>
-            </div>
+              </motion.div>
+
+            </motion.div>
           );
         })}
       </div>

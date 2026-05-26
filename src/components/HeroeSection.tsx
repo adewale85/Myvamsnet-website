@@ -1,20 +1,22 @@
 import HeroeCard from "./HeroeCard";
 import HeroeprojectNames from "./HeroeprojectNames";
 
+
 function HeroeSection() {
   return (
-    <section className=" lg:py-16 py-8 gap-8 lg:mt-28 mt-20">
-    
-      <div className="Inner-wrapper flex flex-col gap-8   ">
-        <h1 className="font-heading font-normal lg:text-[68px] text-[40px] lg:leading-[88px] leading-[1.1] text-white">
+    <section className="space-y-22">
+   
+      <div className="Inner-wrapper flex flex-col gap-8 ">
+        <div className="lg:h-[282px] h-full items-center lg:pt-22 pt-[2px] justify-center space-y-8">
+        <h1 className="lg:w-252.25 w-[4g00px]  font-heading font-normal lg:text-[68px] text-[40px] lg:leading-22 leading-12.5  text-white">
           Empowering {" "}
           <br className="lg:hidden" /> 
           you with{" "}
           <span className="text-[#007FFF]">
             <span className="lg:hidden">tech</span> <br className="lg:block hidden"/>
             <span className="hidden lg:inline">technology</span>
-          </span>
-          <br className="md:hidden" />
+          </span> 
+          <br className="lg:hidden" />
           
           <span className="lg:text-white">{" "} and</span>{" "}
           <span className="text-[#007FFF]">innovation</span>
@@ -24,7 +26,7 @@ function HeroeSection() {
           We deliver tech-enabled growth for individuals and businesses across
           Africa and beyond.
         </p>
-
+      </div>
         <div className="lg:hidden space-y-6">
           <button className="w-full h-13 rounded-lg text-[16px] font-bold leading-[100%] text-brand-lime bg-[#007FFF] hover:bg-[#007FFF]transition-colors duration-300">
             Book Consultation
@@ -35,7 +37,7 @@ function HeroeSection() {
         </div>
       </div>
    
-      <div className="space-y-12 py-12">
+      <div className="space-y-6">
       <HeroeCard />
       <HeroeprojectNames />
       </div>

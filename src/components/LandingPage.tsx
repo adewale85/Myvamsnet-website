@@ -14,12 +14,12 @@ import WhatWeDoSection from "./WhatWeDoSection"
 function LandingPage() {
   return (
     <main>
-      <section className='relative min-h-screen  bg-[url("/Hero_background.svg")] bg-cover bg-center bg-no-repeat'>
-      {/* <Navbar /> */}
+      <section className='relative bg-[url("/Hero_background.svg")] bg-cover bg-center bg-no-repeat py-22'>
+     
       <HeroeSection />
       </section>
       <GrowthSection />
-      <div className='relative min-h-screen  bg-[url("/What_we_do_bg.svg")] bg-cover bg-center bg-no-repeat'>
+      <div className=' relative min-h-screen  bg-[url("/What_we_do_bg.svg")] bg-cover bg-center bg-no-repeat'>
         <WhatWeDoSection />
       </div>
       <div className='flex items-center justify-center relative min-h-[665px]  bg-[url("/Webuild_bg.svg")] bg-cover bg-center bg-no-repeat'>
@@ -45,7 +45,7 @@ function LandingPage() {
      <Image src="/Lastimage.svg" alt="We Build Image" width={1940} height={514} className='lg:block hidden w-full'/>
      <Image src="/MobileLastimage.svg" alt="We Build Image" width={575} height={404} className='lg:hidden w-full h-[404px]'/>
    </div>
-      {/* <Footer/> */}
+      
     </main>
   )
 }

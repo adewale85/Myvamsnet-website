@@ -34,7 +34,7 @@ export default function RootLayout({
       // 4. Add both variables to the className
       className={`${russo.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
-       <section className='fixed top-0 left-0 w-full z-50 backdrop-blur-lg min-h-[12px] bg-[url("/Hero_background.svg")] bg-cover bg-center bg-no-repeat'>
+       <section className='h-22 mb-22 fixed top-0 left-0 w-full z-50 '>
       <Navbar />
       </section>
       <body className="min-h-full flex flex-col font-space">

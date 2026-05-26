@@ -30,12 +30,12 @@ const duplicatedCards = [...cardData, ...cardData];
         onMouseLeave={() => setIsPaused(false)}
       >
         {duplicatedCards.map((card, index) => (
-          <div key={index} className="flex-shrink-0 w-[441px] h-[359px]">
+          <div key={index} className="flex-shrink-0 w-[541px] h-[459px]">
             <Image 
               src={card.img} 
               alt={`Card ${card.id}`} 
-              width={441} 
-              height={359} 
+              width={541} 
+              height={459} 
               className="rounded-3xl"
             />
           </div>

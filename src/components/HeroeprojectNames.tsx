@@ -27,7 +27,7 @@ function HeroeprojectNames() {
       >
         {duplicatedNames.map((project, index) => (
           <div key={index} className="flex items-center justify-between gap-6">
-            <h1 className="text-[20px] lg:text-[24px] font-bold text-white whitespace-nowrap opacity-60 hover:opacity-100 transition-opacity">
+            <h1 className="text-[20px] lg:text-[24px] font-bold text-white/40 whitespace-nowrap ">
               {project.name}
             </h1>
           </div>
