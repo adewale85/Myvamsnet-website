@@ -77,7 +77,7 @@ function Testimonies() {
                 {Array.from({ length: data.stars }).map((_, index) => (
                   <span key={index}>
                     <Image
-                      src={"Rate_Icon.svg"}
+                      src="Rate_Icon.svg"
                       alt=""
                       width={20}
                       height={20}

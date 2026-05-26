@@ -38,7 +38,7 @@ const servicesData = [
 
 export default function WhatWeDoSection() {
   return (
-    <section className="py-16 px-4 max-w-7xl Inner-wrapper space-y-6">
+    <section className="py-16 px-4 max-w-7xl Inner-wrapper ">
       <header className="sticky top-22 z-40 pt-8 pb-12 flex items-center justify-between gap-6 mb-8">
         <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
           WHAT WE DO
@@ -85,7 +85,7 @@ export default function WhatWeDoSection() {
                 viewport={{ once: false }}
                 className="w-full lg:w-[600px] h-auto lg:h-[565px] flex items-center justify-center p-8 lg:p-0 bg-white"
               >
-                <div className="w-full lg:w-[504px] space-y-8 lg:space-y-12">
+                <div className="w-full lg:w-[504px] space-y-8 lg:space-y-5">
                   <motion.div variants={fadeInUp(15, 0.5)} className="inline-block">
                     <span className="font-normal lg:text-[16px] text-[12px] leading-[100%] font-heading text-[#007FFF] bg-[#EEF6FF] rounded-full px-4 py-2">
                       {service.badge}
@@ -103,7 +103,7 @@ export default function WhatWeDoSection() {
                   <motion.div variants={fadeInUp(10, 0.4)}>
                     <Link href={service.btnLink} className="block">
                       <motion.button 
-                        className="w-full h-[52px] font-bold text-[16px] rounded-xl lg:text-[#007FFF] text-brand-lime leading-[100%] border border-[#007FFF] bg-[#007FFF] transition-colors"
+                        className="w-full h-[52px] font-bold text-[16px] rounded-xl lg:text-[#ffffff] text-brand-lime leading-[100%] border border-[#007FFF] bg-[#007FFF] hover:bg-[#006fde] "
                         whileHover={{ scale: 1.02, backgroundColor: "#007FFF", color: "#C7FF01" }}
                         whileTap={{ scale: 0.98 }}
                       >

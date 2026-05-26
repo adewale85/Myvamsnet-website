@@ -25,19 +25,19 @@ function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    // Added structural cleanup function to prevent memory scroll leaks
+    
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      className={`h-22 fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`lg:h-22 h-15.5 fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="Inner-wrapper flex items-center justify-between gap-6 h-full px-4 lg:px-0">
+      <div className="Inner-wrapper flex items-center justify-between gap-6 h-full px-4 lg:px-0 lg:mb-0 mb-22">
         
-        {/* Logo Container */}
+        {/* Logo */}
         <div className="relative w-[190px] h-[32px]">
           <Image
             src="/MyVamsnet_Logo.svg"
@@ -75,7 +75,7 @@ function Navbar() {
           ))}
         </ul>
 
-        {/* Desktop CTA Button */}
+        {/* Desktop Button */}
         <div className="lg:block hidden">
           <button className="bg-[#007FFF] px-8 py-3.5 rounded-lg text-[#C7FF01] text-sm font-normal hover:opacity-90 transition font-heading">
             Contact us

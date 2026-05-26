@@ -10,7 +10,7 @@
 @theme inline {
   --font-heading: var(--font-russo);
   --font-sans: var(--font-space);
-  --font-space: var(--font-space)
+ 
 
   --color-brand-blue: var(--brand-blue);
   --color-brand-lime: var(--brand-lime);
@@ -24,7 +24,7 @@
 }
 
 .Wrapper {
-  @apply w-full max-w-[1440px] mx-auto px-4 
+  @apply w-full max-w-[1440px] mx-auto px-4 ;
 }
 
 .Inner-wrapper {

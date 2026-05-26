@@ -60,8 +60,8 @@ function OurRecentProject() {
             </div>
 
             {/* Text & Action Content */}
-            <div className=" flex flex-col items-center justify-center lg:w-75 w-[293px]  lg:space-y-4 space-y-6 ">
-              <div className="lg:space-y-3 space-y-6 ">
+            <div className=" flex flex-col items-center justify-center lg:w-[312px] w-full space-y-6 ">
+              <div className="lg:space-y-5 space-y-6 ">
                 <p className="font-bold lg:text-[20px] text-[16px] leading-9 text-[#FFFFFF]">
                   {Project.badge}
                 </p>
