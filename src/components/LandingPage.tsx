@@ -14,7 +14,7 @@ import WhatWeDoSection from "./WhatWeDoSection"
 function LandingPage() {
   return (
     <main>
-      <section className='relative bg-[url("/Hero_background.svg")] bg-cover bg-center bg-no-repeat py-22'>
+      <section className='relative bg-[url("/Hero_background.svg")] bg-cover bg-center bg-no-repeat py-12 lg:pt-12 pt-25'>
      
       <HeroeSection />
       </section>
@@ -41,10 +41,11 @@ function LandingPage() {
       <div className='relative min-h-[495px] bg-[radial-gradient(circle_at_center,#151B2F_0%,_#004C99_100%,_#004C99_100%)] bg-cover bg-center bg-no-repeat text-center flex flex-col text-center items-center justify-center'>
         <ReadyToBuild />
         </div>
-      <div>
-     <Image src="/Lastimage.svg" alt="We Build Image" width={1940} height={514} className='lg:block hidden w-full'/>
-     <Image src="/MobileLastimage.svg" alt="We Build Image" width={575} height={404} className='lg:hidden w-full h-[404px]'/>
-   </div>
+    <div>
+   <Image src="/Lastimage.svg" alt="We Build Image" width={1940} height={514} className='lg:block hidden w-full'/>
+
+   <Image src="/MobileLastimage.svg" alt="We Build Image" width={575} height={404} className='lg:hidden w-full h-[404px] object-cover'/>
+</div>
       
     </main>
   )

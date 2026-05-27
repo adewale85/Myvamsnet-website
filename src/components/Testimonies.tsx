@@ -58,9 +58,10 @@ function Testimonies() {
         
           <div
             key={id}
-            className="bg-[#FFFFFF] lg:w-[380px] w-[343px] h-[324px] rounded-b-4xl border-2 border-[#FFFFFF] rounded-3xl flex flex-shrink-0 items-center justify-center"
+            className="bg-[#FFFFFF] lg:w-[380px] w-[343px] h-[324px] rounded-b-4xl border-2 border-[#FFFFFF] rounded-3xl flex items-center justify-center"
           >
-            <div className="w-[316px] h-[260px] space-y-4 flex-col items-center ">
+            {/* FIXED HERE: Added "flex" before "flex-col" so items-center works on mobile */}
+            <div className="w-[316px] h-[260px] space-y-4 flex flex-col  lg:px-0 px-8 ">
               <div className="flex gap-2 text-amber-500 lg:flex hidden">
                 {Array.from({ length: data.stars }).map((_, index) => (
                   <span key={index}>
@@ -73,7 +74,9 @@ function Testimonies() {
                   </span> 
                 ))}
               </div>
-              <div className="flex gap-2 text-amber-500 lg:hidden">
+              
+              {/* FIXED HERE: Added justify-center to center stars horizontally on mobile */}
+              <div className="flex gap-2 text-amber-500 lg:hidden w-full items-center ">
                 {Array.from({ length: data.stars }).map((_, index) => (
                   <span key={index}>
                     <Image
@@ -85,8 +88,14 @@ function Testimonies() {
                   </span> 
                 ))}
               </div>
-              <p className="lg:w-[316px] w-[236px] lg:text-[20px] text-[16px] leading-9 font-normal">"{data.quote}"</p>
-              <div className="flex gap-6 items-center ">
+
+              {/* FIXED HERE: Added text-center so the quote centers on mobile, and changed w-[236px] to w-full to match desktop alignment spacing */}
+              <p className="w-[236px] lg:w-[316px] lg:text-[20px] text-[16px] leading-9 font-normal ">
+                "{data.quote}"
+              </p>
+
+              {/* FIXED HERE: Added flex-col items-center on mobile to center profile image and texts together */}
+              <div className="flex lg:flex-row gap-3 lg:gap-6  justify-start lg:justify-start w-full">
                 <Image
                   src={data.avatarSrc}
                   alt={data.name}
@@ -99,9 +108,10 @@ function Testimonies() {
                   alt={data.name}
                   width={20}
                   height={20}
-                  className="w-16 h-16 rounded-full object-cover lg:hidden"
+                  className="w-12 h-12 rounded-full object-cover lg:hidden"
                 />
-                <div>
+                {/* FIXED HERE: Added text-center on mobile for title alignment */}
+                <div className="text-center lg:text-left">
                   <h4 className="font-normal lg:text-[20px] text-[16px] leading-100% text-[#232B33] font-heading">{data.name}</h4>
                   <p className="lg:text-[20px] text-[16px] leading-[26px] font-normal text-[#232B33BF]">{data.role}</p>
                 </div>

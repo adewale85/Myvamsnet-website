@@ -35,15 +35,14 @@ function Navbar() {
         isScrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="Inner-wrapper flex items-center justify-between gap-6 h-full px-4 lg:px-0 lg:mb-0 mb-22">
+      <div className="Inner-wrapper flex items-center justify-between gap-6 h-full lg:mb-0 mb-22">
         
         {/* Logo */}
-        <div className="relative w-[190px] h-[32px]">
+        <div className="relative lg:w-[190px] lg:h-[32px] w-[137.86px] h-[20px]">
           <Image
             src="/MyVamsnet_Logo.svg"
             alt="logo"
-            width={190}
-            height={32}
+            fill
             className={`absolute inset-0 transition-opacity duration-300 ${
               isScrolled ? "opacity-0 pointer-events-none" : "opacity-100"
             }`}
@@ -51,8 +50,7 @@ function Navbar() {
           <Image
             src="/myVamsnetLogo_blue.svg"
             alt="logo"
-            width={190}
-            height={32}
+            fill
             className={`absolute inset-0 transition-opacity duration-300 ${
               isScrolled ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
@@ -88,9 +86,9 @@ function Navbar() {
           className="flex items-center justify-center lg:hidden z-50"
         >
           {isOpen ? (
-            <FaXmark className={isScrolled ? "text-[#232B33]" : "text-white"} size={24} />
+            <FaXmark className={isScrolled ? "text-[#232B33]" : "text-white"} size={18} />
           ) : (
-            <FaBarsStaggered className={isScrolled ? "text-[#232B33]" : "text-white"} size={24} />
+            <FaBarsStaggered className={isScrolled ? "text-[#232B33]" : "text-white"} size={18} />
           )}
         </button>
 

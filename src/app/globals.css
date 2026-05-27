@@ -22,13 +22,13 @@
     --foreground: #0a0a0a;
   }
 }
-
+/* 
 .Wrapper {
   @apply w-full max-w-[1440px] mx-auto px-4 ;
-}
+} */
 
 .Inner-wrapper {
-  @apply w-full max-w-[1200px] mx-auto lg:px-0 px-4; 
+  @apply w-full lg:max-w-[1200px] mx-auto lg:px-0 px-4; 
 }
 
 body {

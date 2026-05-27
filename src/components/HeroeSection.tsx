@@ -4,11 +4,11 @@ import HeroeprojectNames from "./HeroeprojectNames";
 
 function HeroeSection() {
   return (
-    <section className="space-y-22">
+    <section className="lg:space-y-22 space-y-5 lg:pt-6">
    
       <div className="Inner-wrapper flex flex-col gap-8 ">
-        <div className="lg:h-[282px] items-center lg:pt-22 pt-[2px] justify-center space-y-8">
-        <h1 className="lg:w-252.25 w-full  font-heading font-normal lg:text-[68px] text-[40px] lg:leading-22 leading-12.5  text-white">
+        <div className="lg:h-75.5 items-center lg:pt-22 justify-center lg:space-y-8 space-y-5">
+        <h1 className="w-full font-heading font-normal lg:text-[68px] text-[40px] lg:leading-22 leading-12.5  text-white">
           Empowering {" "}
           <br className="lg:hidden" /> 
           you with{" "}
@@ -31,13 +31,13 @@ function HeroeSection() {
           <button className="w-full h-13 rounded-lg text-[16px] font-bold leading-[100%] text-brand-lime bg-[#007FFF] hover:bg-[#007FFF]transition-colors duration-300">
             Book Consultation
           </button>
-          <button className="w-full h-13 rounded-lg text-[16px] font-bold leading-[100%] text-white border border-white border-opacity-50 hover:bg-brand-blue transition-colors duration-300">
+          <button className="w-full h-13 rounded-lg text-[16px] font-bold leading-[100%] text-white border border-[#FFFFFF80] hover:bg-brand-blue transition-colors duration-300">
             Contact us
           </button>
         </div>
       </div>
    
-      <div className="space-y-6">
+      <div className="">
       <HeroeCard />
       <HeroeprojectNames />
       </div>

@@ -4,6 +4,7 @@
  * 1. The Global Entry Parent Wrapper (Handles Staggering)
  * Use on a parent container to make child elements animate one after the other.
  */
+
 export const staggerContainer = (staggerTime = 0.12, delayTime = 0.1) => ({
   hidden: { opacity: 0 },
   visible: {
@@ -64,6 +65,7 @@ export const floatingY = (yDistance = 6, durationTime = 4) => ({
  * Generates initial, whileInView, and viewport settings dynamically.
  * Change once parameter to 'true' if a specific section should only animate once.
  */
+
 export const getScrollProps = (onceSetting = false, viewportMargin = "-100px") => ({
   initial: "hidden",
   whileInView: "visible",

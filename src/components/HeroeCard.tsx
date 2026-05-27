@@ -16,7 +16,7 @@ function HeroSlideImage() {
     ]
 const duplicatedCards = [...cardData, ...cardData];
   return (
-   <div className="overflow-hidden w-full py-10">
+   <div className="overflow-hidden w-full lg:py-10 py-5">
       <motion.div
         className="flex w-max gap-6 cursor-pointer"
         style={{ willChange: "transform" }}
@@ -30,13 +30,14 @@ const duplicatedCards = [...cardData, ...cardData];
         onMouseLeave={() => setIsPaused(false)}
       >
         {duplicatedCards.map((card, index) => (
-          <div key={index} className="flex-shrink-0 w-[541px] h-[459px]">
+          <div 
+          key={index} className="flex-shrink lg:w-[541px] w-[315px] h-[256px] lg:h-[459px] relative">
             <Image 
               src={card.img} 
               alt={`Card ${card.id}`} 
-              width={541} 
-              height={459} 
-              className="rounded-3xl"
+              fill
+              sizes="(max-width: 1024px) 280px, 541px"
+              className="rounded-3xl object-contain"
             />
           </div>
         ))}

@@ -38,8 +38,8 @@ const servicesData = [
 
 export default function WhatWeDoSection() {
   return (
-    <section className="py-16 px-4 max-w-7xl Inner-wrapper ">
-      <header className="sticky top-22 z-40 pt-8 pb-12 flex items-center justify-between gap-6 mb-8">
+    <section className="py-16 max-w-7xl Inner-wrapper ">
+      <header className="sticky lg:top-22  z-40 lg:pt-8 flex items-center justify-between gap-6 lg:mb-8">
         <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
           WHAT WE DO
         </p>
@@ -49,7 +49,7 @@ export default function WhatWeDoSection() {
       {/* CRITICAL STACKING CONTAINER:
         No `space-y` classes here! The padding-bottom creates room for cards to layer natively.
       */}
-      <div className="relative space-y-30 py-6">
+      <div className="relative py-6 space-y-6 lg:space-y-0">
         {servicesData.map((service, index) => {
           const isReversed = index % 2 !== 0;
           
@@ -57,17 +57,16 @@ export default function WhatWeDoSection() {
           return (
             <motion.div 
               key={service.badge} 
-              className={`w-full bg-[#FFFFFF] rounded-[32px] overflow-hidden shadow-xl flex flex-col-reverse lg:items-center justify-between border border-black/5
-                sticky ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row' }`}
-              style={{
-                top: "200px", 
+              className={`w-full bg-[#FFFFFF] rounded-[32px] overflow-hidden flex flex-col-reverse lg:items-center justify-between border border-black/5
+                lg:sticky lg:top-[200px] ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row' }`}
+              style={{ 
                 zIndex: 40 + index, // Adjusts where cards stack relative to your sticky navbar
               }}
               
               // Smooth initial viewport entrance as a card comes up from the bottom
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, margin: "-50px" }}
+              viewport={{ once: false, margin: "-200px" }}
               transition={{ duration: 0.6, ease: "easeOut" }}
 
               // Interaction: Slight scale up when mouse targets a specific layer
@@ -83,9 +82,9 @@ export default function WhatWeDoSection() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: false }}
-                className="w-full lg:w-[600px] h-auto lg:h-[565px] flex items-center justify-center p-8 lg:p-0 bg-white"
+                className="w-full lg:w-[600px] lg:h-[565px] h-[422px] flex items-center justify-center p-8 lg:p-0 bg-white"
               >
-                <div className="w-full lg:w-[504px] space-y-8 lg:space-y-5">
+                <div className="w-full lg:w-[504px] space-y-3 lg:space-y-5">
                   <motion.div variants={fadeInUp(15, 0.5)} className="inline-block">
                     <span className="font-normal lg:text-[16px] text-[12px] leading-[100%] font-heading text-[#007FFF] bg-[#EEF6FF] rounded-full px-4 py-2">
                       {service.badge}

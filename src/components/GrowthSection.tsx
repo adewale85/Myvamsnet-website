@@ -38,27 +38,27 @@ export default function GrowthSection() {
       </div>
 
       {/* Middle Text Container - FIXED: Changed h-[576px] to lg:h-[576px] h-auto */}
-      <div className="lg:w-[520px] w-full h-auto lg:h-[576px] text-[#232B33] space-y-5">
-        <h2 className="font-bold text-[32px] text-[28px] leading-tight lg:leading-[68px]">
+      <div className="lg:w-[520px] w-[343px] h-auto lg:h-[576px] text-[#232B33] space-y-5">
+        <h2 className="w-[279px] lg:w-[520px] font-bold lg:text-[48px] text-[28px] leading-10 lg:leading-17">
           Growth Shouldn’t Be This Hard...
         </h2>
-        <p className="font-normal text-[16px] lg:text-[20px] leading-relaxed lg:leading-9">
+        <p className="font-normal text-[16px] lg:text-[20px] leading-8 lg:leading-9 text-[#232B33BF]">
           Many individuals and businesses struggle with growth, not because of
           lack of potential, but lack of the right structure, tools, and
           guidance.
         </p>
-        <p className="font-normal text-[16px] lg:text-[20px] leading-relaxed lg:leading-9">
+        <p className="font-normal text-[16px] lg:text-[20px] leading-8 lg:leading-9 text-[#232B33BF]">
           Opportunities disappears, direction is vague. execution is unclear,
           and growth feels harder.
         </p>
-        <p className="font-normal text-[16px] sm:text-[20px] leading-relaxed lg:leading-9">
+        <p className="font-normal text-[16px] sm:text-[20px] leading-8 lg:leading-9 text-[#232B33BF]">
           At{" "}
-          <span className="text-[#007FFF] font-bold text-[16px] sm:text-[20px]">
+          <span className="text-[#007FFF] font-bold text-[16px] lg:text-[20px] leading-8">
             MyVamsnet
           </span>
           , we exist to change that.
         </p>
-        <p className="font-normal text-[16px] sm:text-[20px] leading-relaxed lg:leading-9">
+        <p className="font-normal text-[16px] lg:text-[20px] leading-8 lg:leading-9 text-[#232B33BF]">
           We are building an ecosystem where technology unlocks opportunity,
           simplifies growth, and creates real impact for people, businesses, and
           communities.

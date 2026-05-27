@@ -41,10 +41,10 @@ export default function Footer() {
           {FOOTER_DATA.map((item, index) => (
             <div 
               key={index} 
-              className={`flex flex-col space-y-4 ${item.widthClass || 'w-full'}`}
+              className={`flex flex-col space-y-4 ${item.widthClass || 'w-full items-center justify-center'}`}
             >
               {/* Heading Container */}
-              <div className="flex gap-2 items-center">
+              <div className="flex-col flex gap-2 lg:items-start lg:items-start items-center lg:justify-start justify-center">
                 {item.imgSrc && (
                   <span className='lg:flex hidden'>
                     <Image
@@ -56,7 +56,7 @@ export default function Footer() {
                   </span>
                 )}
                 {item.imgSrc && (
-                  <span className='lg: hidden'>
+                  <span className='lg:hidden '>
                     <Image
                       src={item.imgSrc}
                       alt={item.imgAlt}
@@ -68,14 +68,14 @@ export default function Footer() {
                 <h3 className="font-heading font-normal text-[18px] leading-9 text-[#FFFFFF]">
                   {item.title}
                 </h3>
-              </div>
+              
                
               {item.subtitle && ( 
-                <p className="font-normal text-[16px] leading-7 text-[#FFFFFFBF] w-[425px]">
+                <p className="font-normal text-[16px] lg:text-start text-center leading-7 text-[#FFFFFFBF] w-[325px]">
                   {item.subtitle}
                 </p>
               )}
-
+            </div>
               {/* Links Column Wrapper */}
               <div className="flex flex-col">
                 <ul className="flex flex-col gap-4">

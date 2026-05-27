@@ -12,12 +12,12 @@ function HeroeprojectNames() {
   ];
 
   // Double the array for a seamless loop
-  const duplicatedNames = [...projectNames, ...projectNames, ...projectNames];
+  const duplicatedNames = [...projectNames, ...projectNames];
 
   return (
     <div className="overflow-hidden w-full">
       <motion.div
-        className="flex items-center justify-between gap-12 "
+        className="flex w-full items-center justify-between gap-12 "
         animate={{ x: ["0%", "50%"] }}
         transition={{
           repeat: Infinity,

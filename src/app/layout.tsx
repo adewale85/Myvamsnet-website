@@ -23,6 +23,11 @@ export const metadata: Metadata = {
   description: "We deliver tech-enabled growth for individuals and businesses across Africa and beyond.",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{

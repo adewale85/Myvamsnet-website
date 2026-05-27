@@ -10,12 +10,12 @@ function ReadyToGrow() {
         </p>
         <div className=" w-full h-1 bg-[#FFFFFF]"></div>
       </header>
-      <div className="w-full lg:h-116 h-[568px] bg-[#014C99] rounded-4xl flex items-center justify-between relative lg:flex-row flex-col-reverse lg:gap-12 gap-6 lg:p-8 p-6" >
+      <div className="w-full lg:h-116 h-142 bg-[#014C99] rounded-4xl flex items-center justify-between relative lg:flex-row flex-col-reverse lg:gap-12 gap-6 lg:p-8 p-6" >
         <div className="lg:w-117.25 w-full items-center justify-center flex-col lg:space-y-8 space-y-4 ">
           <h2 className=" font-bold lg:text-[48px] text-[28px] lg:leading-17 leading-[40px] lg:text-left text-center text-[#FFFFFF] ">
             So Why Wait??? Start Your Journey To Success Now!
             </h2>
-            <p className="lg:w-full w-[255px] font-normal lg:text-[20px] lg:text-left text-center text-[16px] leading-9 text-[#FFFFFFBF]">
+            <p className="lg:w-full w-[255px] font-normal lg:text-[20px] lg:text-left text-center text-[16px] leading-9 text-[#FFFFFFBF] flex">
               We can’t wait to walk with you on this journey
             </p>
           
