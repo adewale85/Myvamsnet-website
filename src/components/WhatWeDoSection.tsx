@@ -38,7 +38,7 @@ const servicesData = [
 
 export default function WhatWeDoSection() {
   return (
-    <section id="WhatWeDoSection" className="py-16 max-w-7xl Inner-wrapper scroll-mt-22 ">
+    <section id="WhatWeDoSection" className="py-16 max-w-7xl Inner-wrapper lg:scroll-mt-22 scroll-mt-12 ">
       <header className="sticky lg:top-22  z-40 lg:pt-8 flex items-center justify-between gap-6 lg:mb-8">
         <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
           WHAT WE DO

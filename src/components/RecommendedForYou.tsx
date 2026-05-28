@@ -33,7 +33,7 @@ function RecommendedForYou() {
 
   return (
     /* MATCHED SECTION STRUCTURE: Integrated space-y-8, responsive padding layout, and full-width tags */
-    <section className="Inner-wrapper space-y-8 lg:px-0 px-4 w-full">
+    <section id='RecommendedForYou' className="Inner-wrapper space-y-8 lg:px-0 px-4 w-full lg:scroll-mt-22 scroll-mt-12">
       <header className="pt-8 flex items-center justify-between gap-6 mb-6">
         <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
           RECOMMENDED FOR YOU

@@ -35,7 +35,7 @@ function OurRecentProject() {
 
   return (
     /* FIXED SECTION: Added max-w-7xl and mx-auto to center the entire block on desktop screen frames */
-    <section id="OurRecentProject" className="Inner-wrapper lg:space-y-8 space-y-5 lg:px-0 px-4 w-full scroll-mt-22">
+    <section id="OurRecentProject" className="Inner-wrapper lg:space-y-8 space-y-5 lg:px-0 px-4 w-full lg:scroll-mt-22 scroll-mt-12">
       <header className="pt-8 flex items-center justify-between gap-6 lg:mb-8 ">
         <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
           OUR RECENT PROJECTS

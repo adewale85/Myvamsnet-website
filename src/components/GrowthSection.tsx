@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 export default function GrowthSection() {
   return (
-    <div className="Inner-wrapper flex lg:flex-row flex-col gap-12 lg:gap-24 py-20 px-4 lg:px-0 ">
+    <section id="GrowthSection" className="Inner-wrapper flex lg:flex-row flex-col gap-12 lg:gap-24 py-20 px-4 lg:px-0 lg:scroll-mt-22 scroll-mt-12">
       {/* Desktop Left Decorative Box */}
       <div className="w-[291px] h-[576px] hidden lg:flex relative ">
         <Image
@@ -85,6 +85,6 @@ export default function GrowthSection() {
           className=""
         />
       </div>
-    </div>
+    </section>
   );
 }
