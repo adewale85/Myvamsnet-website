@@ -12,10 +12,10 @@ function ReadyToBuild() {
       <p className='lg:w-[587px] w-[283px] text-center font-normal lg:text-[20px] text-[16px] leading-9 text-[#FFFFFFCC]'>We help you move forward with clarity and confidence.</p>
       </div>  
             <div className="flex lg:flex-row flex-col gap-5 items-center justify-center">
-              <button className="w-73 h-14.75 font-heading rounded-lg text-[16px] font-normal leading-[100%] text-brand-lime bg-[#007FFF] hover:bg-[#007FFF] transition-colors duration-300">
+              <button className="w-73 h-14.75 font-heading rounded-lg text-[16px] font-normal leading-[100%] text-brand-lime bg-[#007FFF] hover:bg-brand-lime hover:text-brand-blue transition-colors duration-300">
                  Book a Consultation
               </button>
-              <button className="w-73 h-14.75 font-heading rounded-lg text-[16px] font-normal leading-[100%] text-brand-lime border border-brand-lime border-opacity-50 hover:bg-brand-red-500 transition-colors duration-300">
+              <button className="w-73 h-14.75 font-heading rounded-lg text-[16px] font-normal leading-[100%] text-brand-lime border border-brand-lime border-opacity-50 hover:bg-brand-blue hover:text-white transition-colors duration-300">
                  Get in Touch
               </button>
             </div>

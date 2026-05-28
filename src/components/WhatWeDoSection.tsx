@@ -38,7 +38,7 @@ const servicesData = [
 
 export default function WhatWeDoSection() {
   return (
-    <section className="py-16 max-w-7xl Inner-wrapper ">
+    <section id="WhatWeDoSection" className="py-16 max-w-7xl Inner-wrapper scroll-mt-22 ">
       <header className="sticky lg:top-22  z-40 lg:pt-8 flex items-center justify-between gap-6 lg:mb-8">
         <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
           WHAT WE DO
@@ -102,7 +102,7 @@ export default function WhatWeDoSection() {
                   <motion.div variants={fadeInUp(10, 0.4)}>
                     <Link href={service.btnLink} className="block">
                       <motion.button 
-                        className="w-full h-[52px] font-bold text-[16px] rounded-xl lg:text-[#ffffff] text-brand-lime leading-[100%] border border-[#007FFF] bg-[#007FFF] hover:bg-[#006fde] "
+                        className="w-full h-[52px] font-bold text-[16px] rounded-xl lg:text-[#ffffff] border border-[#C7FF01] text-brand-lime leading-[100%] bg-brand-blue lg:hover:bg-[#006fde]"
                         whileHover={{ scale: 1.02, backgroundColor: "#007FFF", color: "#C7FF01" }}
                         whileTap={{ scale: 0.98 }}
                       >

@@ -35,8 +35,8 @@ function OurRecentProject() {
 
   return (
     /* FIXED SECTION: Added max-w-7xl and mx-auto to center the entire block on desktop screen frames */
-    <section className="Inner-wrapper space-y-8 lg:px-0 px-4 w-full">
-      <header className="pt-8 flex items-center justify-between gap-6 mb-8">
+    <section id="OurRecentProject" className="Inner-wrapper lg:space-y-8 space-y-5 lg:px-0 px-4 w-full scroll-mt-22">
+      <header className="pt-8 flex items-center justify-between gap-6 lg:mb-8 ">
         <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
           OUR RECENT PROJECTS
         </p>
@@ -63,8 +63,8 @@ function OurRecentProject() {
 
             {/* Text & Action Content */}
             <div className="flex flex-col items-center justify-center lg:w-[312px] w-[303px] lg:space-y-6 space-y-4">
-              <div className="lg:space-y-5 space-y-3 ">
-                <p className="font-bold lg:text-[20px] text-[16px] leading-9 text-[#FFFFFF]">
+              <div className="lg:space-y-5 space-y-3">
+                <p className="font-bold lg:text-[20px] text-[16px] leading-9 text-[#FFFFFF] ">
                   {Project.badge}
                 </p>
                 <p className="font-normal text-[16px] lg:text-[20px] leading-9 text-[#FFFFFFCC]">

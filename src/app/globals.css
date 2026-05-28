@@ -1,11 +1,16 @@
 @import "tailwindcss";
 
+
 :root {
   --brand-blue: #007FFF;
   --brand-lime: #C7FF01;
   --background: #ffffff;
 
 }
+
+/* html {
+  scroll-behavior: smooth;
+} */
 
 @theme inline {
   --font-heading: var(--font-russo);

@@ -31,7 +31,7 @@ function LandingPage() {
       <div className='relative lg:h-[1152px] bg-[url("/FAQBackground.svg")] bg-cover bg-center bg-no-repeat flex items-center justify-center'>
         <FAQ/>
       </div>
-      <div className='relative lg:h-[1609px] h-[2158px] bg-[url("/What_we_do_bg.svg")] bg-cover bg-center bg-no-repeat flex items-center justify-center '>
+      <div className='relative lg:h-[1609px] h-[2250px] bg-[url("/What_we_do_bg.svg")] bg-cover bg-center bg-no-repeat flex items-center justify-center '>
         <HowWeWork />
       </div>
       <div className='relative lg:h-[827px] h-[1848px] bg-[#FFFFFF] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center'> 

@@ -31,7 +31,7 @@ function HeroeSection() {
           <button className="w-full h-13 rounded-lg text-[16px] font-bold leading-[100%] text-brand-lime bg-[#007FFF] hover:bg-[#007FFF]transition-colors duration-300">
             Book Consultation
           </button>
-          <button className="w-full h-13 rounded-lg text-[16px] font-bold leading-[100%] text-white border border-[#FFFFFF80] hover:bg-brand-blue transition-colors duration-300">
+          <button className="w-full h-13 rounded-lg text-[16px] font-bold leading-[100%] text-[#FFFFFFBF] border border-[#FFFFFF80] hover:bg-brand-blue transition-colors duration-300">
             Contact us
           </button>
         </div>

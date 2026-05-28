@@ -30,10 +30,10 @@ function WeBuild() {
           </div>
 
           <div className="flex lg:flex-row flex-col gap-6 items-center justify-center w-full">
-  <button className="lg:w-73 w-full h-14.75 rounded-lg text-[16px] font-heading font-normal leading-[100%] text-brand-lime bg-[#007FFF] hover:bg-[#007FFF] transition-colors duration-300">
+  <button className="lg:w-73 w-full h-14.75 rounded-lg text-[16px] font-heading font-normal leading-[100%] text-brand-lime bg-[#007FFF] hover:bg-brand-lime hover:text-brand-blue transition-colors duration-300">
     Partner with us
   </button>
-  <button className="lg:w-73 w-full h-14.75 rounded-lg text-[16px] font-heading font-normal leading-[100%] text-brand-lime border border-brand-lime border-opacity-50 hover:bg-brand-red-500 transition-colors duration-300">
+  <button className="lg:w-73 w-full h-14.75 rounded-lg text-[16px] font-heading font-normal leading-[100%] text-brand-lime border border-brand-lime border-opacity-50 hover:bg-brand-blue hover:text-white transition-colors duration-300">
     Join our Team
   </button>
 </div>

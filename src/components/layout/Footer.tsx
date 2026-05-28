@@ -44,7 +44,7 @@ export default function Footer() {
               className={`flex flex-col space-y-4 ${item.widthClass || 'w-full items-center justify-center'}`}
             >
               {/* Heading Container */}
-              <div className="flex-col flex gap-2 lg:items-start lg:items-start items-center lg:justify-start justify-center">
+              <div className="flex-col flex gap-2 items-start  items-center justify-start ">
                 {item.imgSrc && (
                   <span className='lg:flex hidden'>
                     <Image
@@ -56,22 +56,22 @@ export default function Footer() {
                   </span>
                 )}
                 {item.imgSrc && (
-                  <span className='lg:hidden '>
+                  <span className='flex justify-center w-full lg:hidden'>
                     <Image
                       src={item.imgSrc}
                       alt={item.imgAlt}
-                      width={137}
-                      height={24}
+                      width={211}
+                      height={37.33}
                     />
                   </span>
                 )}
-                <h3 className="font-heading font-normal text-[18px] leading-9 text-[#FFFFFF]">
+                <h3 className="font-heading font-normal text-[18px]  leading-9 text-[#FFFFFF] ">
                   {item.title}
                 </h3>
               
-               
+              
               {item.subtitle && ( 
-                <p className="font-normal text-[16px] lg:text-start text-center leading-7 text-[#FFFFFFBF] w-[325px]">
+                <p className="font-normal text-[16px] lg:text-start text-center leading-7 text-[#FFFFFFBF] lg:w-[325px] w-full">
                   {item.subtitle}
                 </p>
               )}

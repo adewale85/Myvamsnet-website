@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaBarsStaggered, FaXmark } from "react-icons/fa6";
 
@@ -11,11 +10,11 @@ function Navbar() {
 
   const Navlinks = [
     { name: "Home", href: "/" },
-    { name: "Projects", href: "#ServiceCard" },
-    { name: "Solutions", href: "/Solutions" },
-    { name: "Studio", href: "/Studio" },
-    { name: "Opportunities", href: "/Opportunities" },
-    { name: "About us", href: "/About-us" },
+    { name: "Projects", href: "#OurRecentProject" },
+    { name: "Solutions", href: "#WhatWeDoSection" },
+    { name: "Studio", href: "#Studio" },
+    { name: "Opportunities", href: "#RecommendedForYou" },
+    { name: "About us", href: "#GrowthSection" },
   ];
 
   useEffect(() => {
@@ -61,14 +60,15 @@ function Navbar() {
         <ul className="items-center justify-center list-none gap-10 text-[16px] font-normal leading-[100%] lg:flex hidden">
           {Navlinks.map((link) => (
             <li key={link.name}>
-              <Link
+              {/* FIXED HERE: Swapped <Link> to <a> for proper single-page section tracking */}
+              <a
                 href={link.href}
                 className={`hover:text-[#007FFF] transition-colors ${
                   isScrolled ? "text-[#232B33]" : "text-white"
                 }`}
               >
                 {link.name}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
@@ -86,9 +86,9 @@ function Navbar() {
           className="flex items-center justify-center lg:hidden z-50"
         >
           {isOpen ? (
-            <FaXmark className={isScrolled ? "text-[#232B33]" : "text-white"} size={18} />
+            <FaXmark className={isScrolled ? "text-brand-blue" : "text-white"} size={18} />
           ) : (
-            <FaBarsStaggered className={isScrolled ? "text-[#232B33]" : "text-white"} size={18} />
+            <FaBarsStaggered className={isScrolled ? "text-brand-blue" : "text-white"} size={18} />
           )}
         </button>
 
@@ -96,14 +96,15 @@ function Navbar() {
         {isOpen && (
           <div className="absolute top-22 left-0 w-full bg-[#F5F5F5] flex flex-col items-center gap-6 py-8 lg:hidden shadow-xl border-b border-black/5 animate-fadeIn">
             {Navlinks.map((link) => (
-              <Link
+              /* FIXED HERE: Swapped <Link> to <a> here as well */
+              <a
                 key={link.name}
                 href={link.href}
-                onClick={() => setIsOpen(false)} // Clean architectural step to hide menu on click
+                onClick={() => setIsOpen(false)}
                 className="text-black text-lg font-medium hover:text-[#007FFF] transition-colors"
               >
                 {link.name}
-              </Link>
+              </a>
             ))}
           </div>
         )}
