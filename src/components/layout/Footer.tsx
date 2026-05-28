@@ -33,7 +33,7 @@ const FOOTER_DATA = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[radial-gradient(circle_at_center,#151B2F_0%,_#004C99_100%,_#004C99_100%)] text-white py-16 px-6 lg:px-16 border-t border-white/10">
+    <footer className="bg-[radial-gradient(circle_at_center,#151B2F_0%,_#004C99_100%,_#004C99_100%)] text-white py-16  border-t border-white/10">
       <div className="Inner-wrapper">
         
         {/* Mobile: 2-column Grid | Desktop: Balanced Custom Flex Row */}

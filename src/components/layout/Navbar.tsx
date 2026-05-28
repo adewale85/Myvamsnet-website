@@ -3,18 +3,19 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { FaBarsStaggered, FaXmark } from "react-icons/fa6";
+import { isExternal } from "util/types";
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   const Navlinks = [
-    { name: "Home", href: "/" },
-    { name: "Projects", href: "#OurRecentProject" },
-    { name: "Solutions", href: "#WhatWeDoSection" },
-    { name: "Studio", href: "#Studio" },
-    { name: "Opportunities", href: "#RecommendedForYou" },
-    { name: "About us", href: "#GrowthSection" },
+    { name: "Home", href: "/", isExternal: false },
+    { name: "Projects", href: "#OurRecentProject", isExternal: false  },
+    { name: "Solutions", href: "#WhatWeDoSection", isExternal: false },
+    { name: "Studio", href: "https://www.myvamsnet.com/", isExternal: true },
+    { name: "Opportunities", href: "#RecommendedForYou", isExternal: false },
+    { name: "About us", href: "#GrowthSection", isExternal: false  },
   ];
 
   useEffect(() => {
@@ -37,7 +38,7 @@ function Navbar() {
       <div className="Inner-wrapper flex items-center justify-between gap-6 h-full lg:mb-0 mb-22">
         
         {/* Logo */}
-        <div className="relative lg:w-[190px] lg:h-[32px] w-[137.86px] h-[20px]">
+        <div className="relative lg:w-[190px] lg:h-[32px] w-[150px] h-[30px]">
           <Image
             src="/MyVamsnet_Logo.svg"
             alt="logo"

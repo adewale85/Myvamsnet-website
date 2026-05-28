@@ -46,10 +46,11 @@ function RecommendedForYou() {
         {ProjectData.map((Project, id) => (
           <div
             key={id}
-            className="lg:w-[376px] w-full lg:h-[571px] h-[548px] bg-[radial-gradient(circle_at_center,#007FFF_0%,_#004C99_90%,_#004C99_100%)] rounded-3xl overflow-hidden flex flex-col lg:space-y-3 space-y-6 items-center"
+            /* FIXED HERE: Removed direct outer item spacing overrides to let flex expansion handle layout constraints natively */
+            className="lg:w-[376px] w-full lg:h-[571px] h-[548px] bg-[radial-gradient(circle_at_center,#007FFF_0%,_#004C99_90%,_#004C99_100%)] rounded-3xl overflow-hidden flex flex-col items-center pb-6"
           >
             {/* Image Container - Bounded exactly to match template */}
-            <div className="w-full h-[259px] relative rounded-xl overflow-hidden">
+            <div className="w-full h-[259px] relative rounded-xl overflow-hidden flex-shrink-0">
               <Image
                 src={Project.imgSrc}
                 alt={Project.imgAlt}
@@ -59,18 +60,19 @@ function RecommendedForYou() {
               />
             </div>
 
-            {/* Text & Action Content - Scaled explicitly to match template container widths */}
-            <div className="flex flex-col items-center justify-center lg:w-[312px] w-[303px] lg:space-y-6 space-y-4">
-              <div className="lg:space-y-5 space-y-3">
+            {/* Text & Action Content - FIXED HERE: Changed justify-center to justify-between and added flex-1 to push the button container to the absolute bottom */}
+            <div className="flex flex-col items-center justify-between lg:w-[312px] w-[303px] flex-1 mt-4">
+              <div className="lg:space-y-4 space-y-2">
                 <p className="font-bold lg:text-[20px] text-[16px] leading-9 text-[#FFFFFF]">
                   {Project.badge}
                 </p>
-                <p className="font-normal text-[16px] lg:text-[20px] leading-9 text-[#FFFFFFCC] h-[144px]">
+                <p className="font-normal text-[16px] lg:text-[20px] leading-9 text-[#FFFFFFCC] ">
                   {Project.description}
                 </p>
               </div>
 
-              <div className="w-full items-end justify-end flex mb-4">
+            
+              <div className="w-full items-end justify-end flex">
                 <button className="font-normal text-[12px] leading-4 font-heading text-[#FFFFFF] flex items-center gap-2 hover:underline hover:translate-x-2 transition-transform">
                   {Project.btnText}
                   <Image

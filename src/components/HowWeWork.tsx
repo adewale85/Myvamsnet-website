@@ -88,7 +88,7 @@ function HowWeWork() {
         </div>
 
         {/* Testimonies */}
-        <div className="w-full lg:mb-0 lg:mt-12 mt-0 mb-20">
+        <div className="w-full lg:mb-0 lg:mt-12 mt-0 lg:mb-20">
           <Testimonies />
         </div>
       </section>
