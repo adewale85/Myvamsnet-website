@@ -67,7 +67,7 @@ export default function WhatWeDoSection() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, margin: "-200px" }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
+              transition={{ duration: 0.6, ease: "easeOut"}}
 
               // Interaction: Slight scale up when mouse targets a specific layer
               whileHover={{ 

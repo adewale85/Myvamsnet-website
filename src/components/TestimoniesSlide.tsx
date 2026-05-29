@@ -15,7 +15,7 @@ function TestimoniesSlide() {
     ]
 const duplicatedCards = [...cardData, ...cardData];
   return (
-   <div className="overflow-hidden w-full ">
+   <div className="overflow-hidden w-full "> m,
       <motion.div
         className="flex w-max gap-6 cursor-pointer"
         style={{ willChange: "transform" }}
@@ -28,15 +28,9 @@ const duplicatedCards = [...cardData, ...cardData];
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        {duplicatedCards.map(( index) => (
-          <div key={index} className="flex-shrink-0">
-            <Image 
-              src={Testimonies} 
-              alt={""} 
-              width={441} 
-              height={359} 
-              className="rounded-3xl"
-            />
+        {duplicatedCards.map((card, index) => (
+          <div key={index} className="flex-shrink-0 rounded-3xl">
+           <card.Testimonies/>
           </div>
         ))}
       </motion.div>

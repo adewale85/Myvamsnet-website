@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, PanInfo } from "framer-motion";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
@@ -56,13 +56,13 @@ function Testimonies() {
     setCurrentIndex((prev) => (prev - 1 + testimonialsData.length) % testimonialsData.length);
   };
 
-  const handleDragEnd = (event, info) => {
-    if (info.offset.x < -50) {
-      handleNext();
-    } else if (info.offset.x > 50) {
-      handlePrev();
-    }
-  };
+ const handleDragEnd = (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+  if (info.offset.x < -50) {
+    handleNext();
+  } else if (info.offset.x > 50) {
+    handlePrev();
+  }
+};
 
   return (
     // FIXED CONTAINER: Added layout constraints (max-w-full) to keep the wrapper locked tightly
