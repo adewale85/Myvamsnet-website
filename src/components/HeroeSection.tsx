@@ -8,7 +8,7 @@ function HeroeSection() {
    
       <div className="Inner-wrapper flex flex-col gap-8 ">
         <div className="lg:h-75.5 items-center lg:pt-22 justify-center lg:space-y-8 space-y-5">
-        <h1 className="w-full font-heading font-normal lg:text-[68px] text-[40px] lg:leading-22 leading-12.5  text-white">
+        <h1 className="w-full font-heading font-normal lg:text-[68px] text-[40px] lg:leading-22 leading-12.5 text-white">
           Empowering {" "}
           <br className="lg:hidden" /> 
           you with{" "}
