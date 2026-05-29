@@ -1,6 +1,7 @@
 "use client";
 
-import { motion, PanInfo } from "framer-motion";
+
+import { PanInfo } from "framer-motion";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
