@@ -9,6 +9,7 @@ import RecommendedForYou from "./RecommendedForYou"
 import TrustedBy from "./TrustedBy"
 import WeBuild from "./WeBuild"
 import WhatWeDoSection from "./WhatWeDoSection"
+import Dashboard from "@/features/landing-page/Dashboard"
 
 
 function LandingPage() {
@@ -22,7 +23,7 @@ function LandingPage() {
       <div className=' relative  bg-[url("/What_we_do_bg.svg")] bg-cover bg-center bg-no-repeat'>
         <WhatWeDoSection />
       </div>
-      <div className='flex items-center justify-center relative min-h-[665px]  bg-[url("/Webuild_bg.svg")] bg-cover bg-center bg-no-repeat'>
+      <div className='flex items-center justify-center relative min-h-166.25  bg-[url("/Webuild_bg.svg")] bg-cover bg-center bg-no-repeat'>
         <WeBuild />
       </div>
       <div className='relative h-[2372px] lg:h-[1081px] bg-[url("/OurProject_image.svg")] bg-cover bg-center bg-no-repeat flex items-center justify-center'>
@@ -45,6 +46,7 @@ function LandingPage() {
    <Image src="/Lastimage.svg" alt="We Build Image" width={1940} height={514} className='lg:block hidden w-full'/>
 
    <Image src="/MobileLastimage.svg" alt="We Build Image" width={575} height={404} className='lg:hidden w-full h-[404px] object-cover'/>
+   
 </div>
       
     </main>

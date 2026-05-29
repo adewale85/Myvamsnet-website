@@ -25,7 +25,7 @@ function FAQ() {
     }
   ];
 
-  // FIXED: Spelled openIndex correctly to match throughout the file
+  
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   
   const toggleFAQ = (index: number) => {
@@ -43,7 +43,7 @@ function FAQ() {
         </p>
       </header>
 
-      {/* FIXED: Removed the hardcoded h-[748px] so the container can expand naturally when panels open */}
+     
       <div className="lg:w-300 w-full rounded-3xl bg-[#EEF6FF] flex flex-col items-center justify-center lg:p-8 p-4 gap-4">
         {faqData.map((faq, index) => {
           const isOpen = openIndex === index;
@@ -67,7 +67,7 @@ function FAQ() {
                 </span>
               </button>
 
-              {/* FIXED: Added the missing answer collapsible container panel */}
+             
               <div
                 className={`transition-all duration-300 ease-in-out overflow-hidden ${
                   isOpen ? 'max-h-125 opacity-100' : 'max-h-0 opacity-0'

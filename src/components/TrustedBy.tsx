@@ -6,7 +6,6 @@ import React, { useState } from "react";
 function TrustedBy() {
   const [isPaused, setIsPaused] = useState(false);
 
-  // Separated the label from the companies so the label doesn't move
   const label = "Trusted by:";
   const companies = ["Eliad Investment", "SEI Africa", "AngyCare UK", "3trive Lab"];
 

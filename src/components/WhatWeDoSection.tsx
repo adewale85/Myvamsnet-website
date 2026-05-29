@@ -46,9 +46,7 @@ export default function WhatWeDoSection() {
         <div className="lg:w-262 w-full h-1 bg-[#FFFFFF]"></div>
       </header>
 
-      {/* CRITICAL STACKING CONTAINER:
-        No `space-y` classes here! The padding-bottom creates room for cards to layer natively.
-      */}
+     
       <div className="relative py-6 space-y-6 lg:space-y-0">
         {servicesData.map((service, index) => {
           const isReversed = index % 2 !== 0;
@@ -69,7 +67,7 @@ export default function WhatWeDoSection() {
               viewport={{ once: false }}
               transition={{ duration: 0.6, ease: "easeOut"}}
 
-              // Interaction: Slight scale up when mouse targets a specific layer
+          
               whileHover={{ 
                 scale: 1.005,
                 borderColor: "rgba(0, 127, 255, 0.2)",
@@ -82,16 +80,16 @@ export default function WhatWeDoSection() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: false }} 
-                className="w-full lg:w-[600px] lg:h-[565px] min-h-[422px] h-auto flex items-center justify-center p-8 lg:p-0 bg-white"
+                className="w-full lg:w-[600px] lg:h-[565px] min-h-[422px] h-auto flex items-center justify-center p-5 lg:p-0 bg-white space-y-3"
               >
-                <div className="w-full lg:w-[504px] space-y-3 lg:space-y-5">
+                <div className="w-full lg:w-[504px] space-y-4 lg:space-y-5">
                   <motion.div variants={fadeInUp(15, 0.5)} className="inline-block">
                     <span className="font-normal lg:text-[16px] text-[12px] leading-[100%] font-heading text-[#007FFF] bg-[#EEF6FF] rounded-full px-4 py-2">
                       {service.badge}
                     </span>
                   </motion.div>
 
-                  <motion.h3 variants={fadeInUp(20, 0.5)} className="font-bold text-[28px] lg:text-[48px] lg:leading-17 leading-10 text-[#232B33] pt-5">
+                  <motion.h3 variants={fadeInUp(20, 0.5)} className="font-bold text-[28px] lg:text-[48px] lg:leading-17 leading-10 text-[#232B33] ">
                     {service.heading}
                   </motion.h3>
 

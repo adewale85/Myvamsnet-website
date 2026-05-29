@@ -14,7 +14,7 @@ function HeroeprojectNames() {
     "Mtrackr",
   ];
 
-  // Duplicate for seamless infinite loop
+  
   const duplicatedProjects = [
     ...projectNames,
     ...projectNames,

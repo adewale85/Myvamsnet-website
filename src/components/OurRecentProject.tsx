@@ -34,7 +34,7 @@ function OurRecentProject() {
   ];
 
   return (
-    /* FIXED SECTION: Added max-w-7xl and mx-auto to center the entire block on desktop screen frames */
+    
     <section id="OurRecentProject" className="Inner-wrapper lg:space-y-8 space-y-5 lg:px-0 px-4 w-full lg:scroll-mt-22 scroll-mt-12">
       <header className="pt-8 flex items-center justify-between gap-6 lg:mb-8 ">
         <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
@@ -43,7 +43,7 @@ function OurRecentProject() {
         <div className="lg:w-262 w-full h-1 bg-[#FFFFFF]"></div>
       </header>
           
-      {/* FIXED CARD TRACK: Added lg:justify-center so the 3 layout cards stay perfectly centered together */}
+     
       <div className="flex flex-col lg:flex-row lg:justify-center lg:gap-8 gap-6 w-full">
         {ProjectData.map((Project, id) => (
           <div
@@ -88,7 +88,7 @@ function OurRecentProject() {
         ))}
       </div>
 
-      {/* Banner Call-To-Action Block */}
+      
       <div className="Inner-wrapper mx-auto w-full lg:h-[214px] h-[567px] bg-brand-lime rounded-4xl border-4 border-[#FFFFFF] flex lg:flex-row flex-col items-center justify-center p-6">
         <div className="flex lg:flex-row flex-col items-center justify-between gap-8 w-full max-w-[1100px]">
           <Image

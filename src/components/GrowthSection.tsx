@@ -37,7 +37,7 @@ export default function GrowthSection() {
 </motion.div>
       </div>
 
-      {/* Middle Text Container - FIXED: Changed h-[576px] to lg:h-[576px] h-auto */}
+      {/* Middle Text Container */}
       <div className="lg:w-[520px] w-[343px] h-auto lg:h-[576px] text-[#232B33] space-y-5">
         <h2 className="w-[279px] lg:w-[520px] font-bold lg:text-[48px] text-[28px] leading-10 lg:leading-17">
           Growth Shouldn’t Be This Hard...

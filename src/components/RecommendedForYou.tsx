@@ -41,12 +41,12 @@ function RecommendedForYou() {
         <div className="lg:w-262 w-full h-1 bg-[#EEF6FF]"></div>
       </header>
    
-      {/* MATCHED CARD TRACK: Cleaned up track flex layout definitions and desktop alignment properties */}
+     
       <div className="flex flex-col lg:flex-row lg:justify-center lg:gap-8 gap-6 w-full">
         {ProjectData.map((Project, id) => (
           <div
             key={id}
-            /* FIXED HERE: Removed direct outer item spacing overrides to let flex expansion handle layout constraints natively */
+           
             className="lg:w-[376px] w-full lg:h-[571px] h-[548px] bg-[radial-gradient(circle_at_center,#007FFF_0%,_#004C99_90%,_#004C99_100%)] rounded-3xl overflow-hidden flex flex-col items-center pb-6"
           >
             {/* Image Container - Bounded exactly to match template */}
@@ -60,7 +60,7 @@ function RecommendedForYou() {
               />
             </div>
 
-            {/* Text & Action Content - FIXED HERE: Changed justify-center to justify-between and added flex-1 to push the button container to the absolute bottom */}
+          
             <div className="flex flex-col items-center justify-between lg:w-[312px] w-[303px] flex-1 mt-4">
               <div className="lg:space-y-4 space-y-2">
                 <p className="font-bold lg:text-[20px] text-[16px] leading-9 text-[#FFFFFF]">

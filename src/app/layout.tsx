@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 // 1. Import your specific fonts
-import { Russo_One, Space_Grotesk } from "next/font/google"; 
+import { Russo_One, Space_Grotesk, Geist } from "next/font/google"; 
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+
 
 // 2. Configure Russo One (usually used for headings)
 const russo = Russo_One({
@@ -37,7 +41,7 @@ export default function RootLayout({
     <html
       lang="en"
       // 4. Add both variables to the className
-      className={`${russo.variable} ${spaceGrotesk.variable} h-full antialiased scroll-smooth`}
+      className={cn("h-full", "antialiased", "scroll-smooth", russo.variable, spaceGrotesk.variable, "font-sans", geist.variable)}
     >
       <body className="min-h-full flex flex-col font-space">
        <section className='h-22 mb-22 fixed top-0 left-0 w-full z-50 '>
