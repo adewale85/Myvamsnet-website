@@ -18,7 +18,7 @@ const duplicatedCards = [...cardData, ...cardData];
   return (
    <div className="overflow-hidden w-full lg:py-10 py-5 lg:mb-0 mb-6">
       <motion.div
-        className="flex w-max gap-6 cursor-pointer"
+        className="flex w-max lg:gap-6 gap-2 cursor-pointer"
         style={{ willChange: "transform" }}
         animate={{ x: isPaused ? undefined : ["0%", "-50%"] }}
         transition={{

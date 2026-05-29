@@ -33,11 +33,11 @@ const FOOTER_DATA = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[radial-gradient(circle_at_center,#151B2F_0%,_#004C99_100%,_#004C99_100%)] text-white py-16  border-t border-white/10">
+    <footer className="bg-[radial-gradient(circle_at_center,#151B2F_0%,_#004C99_100%,_#004C99_100%)] text-white lg:py-16 py-6  border-t border-white/10">
       <div className="Inner-wrapper">
         
         {/* Mobile: 2-column Grid | Desktop: Balanced Custom Flex Row */}
-        <div className="grid grid-cols-2 lg:flex lg:flex-row lg:justify-between gap-12 lg:gap-0 mb-16">
+        <div className="grid grid-cols-2 lg:flex lg:flex-row lg:justify-between gap-12 lg:gap-0 ">
           {FOOTER_DATA.map((item, index) => (
             <div 
               key={index} 
@@ -97,7 +97,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Socials & Support Row */}
-        <div className="my-8 py-8 border-y border-white/10 flex flex-col lg:flex-row items-center justify-between gap-6 text-sm text-[#FFFFFFBF]">
+        <div className="lg:my-8 py-8 border-y border-white/10 flex flex-col lg:flex-row items-center justify-between gap-6 text-sm text-[#FFFFFFBF]">
           <p>© 2026 MyVamsnet Ltd. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <p className="hover:text-white transition-colors cursor-pointer">Support@myvamsnet.com</p>

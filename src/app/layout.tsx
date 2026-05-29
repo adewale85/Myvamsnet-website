@@ -39,13 +39,13 @@ export default function RootLayout({
       // 4. Add both variables to the className
       className={`${russo.variable} ${spaceGrotesk.variable} h-full antialiased scroll-smooth`}
     >
+      <body className="min-h-full flex flex-col font-space">
        <section className='h-22 mb-22 fixed top-0 left-0 w-full z-50 '>
       <Navbar />
       </section>
-      <body className="min-h-full flex flex-col font-space">
         {children}
-      </body>
       <Footer/>
+      </body>
     </html>
   );
 }

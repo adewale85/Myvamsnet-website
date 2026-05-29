@@ -66,7 +66,7 @@ export default function WhatWeDoSection() {
               // Smooth initial viewport entrance as a card comes up from the bottom
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, margin: "-200px" }}
+              viewport={{ once: false }}
               transition={{ duration: 0.6, ease: "easeOut"}}
 
               // Interaction: Slight scale up when mouse targets a specific layer
@@ -81,8 +81,8 @@ export default function WhatWeDoSection() {
                 variants={staggerContainer(0.12, 0.1)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false }}
-                className="w-full lg:w-[600px] lg:h-[565px] h-[422px] flex items-center justify-center p-8 lg:p-0 bg-white"
+                viewport={{ once: false }} 
+                className="w-full lg:w-[600px] lg:h-[565px] min-h-[422px] h-auto flex items-center justify-center p-8 lg:p-0 bg-white"
               >
                 <div className="w-full lg:w-[504px] space-y-3 lg:space-y-5">
                   <motion.div variants={fadeInUp(15, 0.5)} className="inline-block">
@@ -115,11 +115,11 @@ export default function WhatWeDoSection() {
               
               {/* Image Block Wrapper */}
               <motion.div 
-                className="w-full lg:w-[600px] h-[300px] lg:h-[565px] relative overflow-hidden"
+                className="w-full lg:w-[600px] h-[300px] lg:h-[565px] relative "
                 variants={slideInDirection(isReversed, 35, 0.6, 0.15)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false }}
+                viewport={{ once: false}}
               >
                 <Image 
                   src={service.imgSrc} 

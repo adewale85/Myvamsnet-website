@@ -26,7 +26,7 @@ function HowWeWork() {
 
   return (
     <>
-      <section className="lg:py-12 py-22 lg:mt-0 mt-22 block w-full">
+      <section className="lg:py-12 py-12 block w-full">
         {/* Header */}
         <header className="Inner-wrapper flex items-center justify-between gap-6 mb-5">
           <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
