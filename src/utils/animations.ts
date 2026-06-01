@@ -93,3 +93,86 @@ export const getScrollProps = (
   whileInView: "visible",
   viewport: { once: onceSetting, margin: viewportMargin },
 });
+
+/**
+ * 6. Premium Magnetic Hover & Snappy Tap (Spring Micro-interaction)
+ * Perfect for your action buttons ("Partner with us", "Join our Team").
+ * Instead of rigid transitions, this mimics high-end tactile hardware.
+ */
+export const premiumButtonInteraction = {
+  initial: { scale: 1 },
+  hover: { 
+    scale: 1.02,
+    transition: { type: "spring", stiffness: 400, damping: 10, mass: 0.8 } 
+  },
+  tap: { 
+    scale: 0.96,
+    transition: { type: "spring", stiffness: 500, damping: 15 } 
+  }
+};
+
+/**
+ * 7. Modern Split-Text Reveal (Letter Stacking)
+ * Perfect for large hero titles or h2 subheaders. 
+ * Masks the words and slides them up from behind an invisible curtain.
+ */
+export const splitTextMask = (delay = 0) => ({
+  hidden: { y: "110%", opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.16, 1, 0.3, 1], // Custom ultra-smooth cubic bezier curve
+      delay
+    }
+  }
+});
+
+/**
+ * 8. Staggered Grid Item Entrance (Scale + Fade)
+ * Beautiful for service grids, benefit grids, or feature cards.
+ * Combines a subtle slide up with an expanding physical scale.
+ */
+export const scaleUpEntrance = (duration = 0.5) => ({
+  hidden: { opacity: 0, y: 30, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration,
+      ease: [0.215, 0.610, 0.355, 1.000] // Out-cubic bezier for snappy arrivals
+    }
+  }
+});
+
+/**
+ * 9. Magnetic Icon Push / Slide-Out Arrow
+ * Animate secondary inline components inside wrappers on hover.
+ * Put this on an arrow SVG inside a button to make it jump forward when hovered.
+ */
+export const iconSlideRight = (distance = 6) => ({
+  initial: { x: 0 },
+  hover: {
+    x: distance,
+    transition: { type: "spring", stiffness: 300, damping: 15 }
+  }
+});
+
+/**
+ * 10. Border Pulse / Highlight Flare Loop
+ * Adds an ambient glowing pulse loop effect to a specific card or item
+ * without creating layout reflow shifting.
+ */
+export const ambientGlowPulse = (minOpacity = 0.3, duration = 3) => ({
+  animate: {
+    opacity: [minOpacity, 0.8, minOpacity],
+    scale: [1, 1.015, 1],
+    transition: {
+      duration,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }
+  }
+}); 

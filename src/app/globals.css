@@ -5,6 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  --font-russo: "Russo One", sans-serif;
+  --font-space: "Space Grotesk", sans-serif;
+
   --brand-blue: #007FFF;
   --brand-lime: #C7FF01;
   --background: oklch(1 0 0);
@@ -47,8 +50,8 @@
 } */
 
 @theme inline {
-  --font-heading: var(--font-sans);
-  --font-sans: var(--font-sans);
+  --font-heading: var(--font-russo);
+  --font-sans: var(--font-space);
 
   --color-brand-blue: var(--brand-blue);
   --color-brand-lime: var(--brand-lime);
