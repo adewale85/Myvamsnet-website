@@ -16,9 +16,9 @@ function OurRecentProject() {
         "MyVamsnet is an impact-driven technology company delivering tech-enabled growth for individuals and businesses across Africa and beyond.",
       btnText: "View Project",
       btnIcon: "/Btn.svg",
-      imgSrc: "/3trive_image.svg",
+      imgSrc: "/3trive.svg",
       imgAlt: "3trive Lab",
-      logo: "/3thrive.svg",
+      logo: "/3trive_logo.svg",
     },
     {
       badge: "Angy Care Home",
@@ -26,9 +26,9 @@ function OurRecentProject() {
         "MyVamsnet is an impact-driven technology company delivering tech-enabled growth for individuals and businesses across Africa and beyond.",
       btnText: "View Project",
       btnIcon: "/Btn.svg",
-      imgSrc: "/Angy care_image.svg",
+      imgSrc: "/Angycare.svg",
       imgAlt: "Angy Care Home",
-      logo: "/Angycare.svg",
+      logo: "/Angycare_logo.png",
     },
     {
       badge: "Mtrackr",
@@ -36,9 +36,9 @@ function OurRecentProject() {
         "MyVamsnet is an impact-driven technology company delivering tech-enabled growth for individuals and businesses across Africa and beyond.",
       btnText: "View Project",
       btnIcon: "/Btn.svg",
-      imgSrc: "/Mtrackr_image.svg",
+      imgSrc: "/Mtrackr.svg",
       imgAlt: "Mtrackr",
-      logo: "/Mtrackr.svg",
+      logo: "/Mtrackr_logo.svg",
     },
   ];
 
@@ -82,7 +82,7 @@ function OurRecentProject() {
                 className="object-cover object-center"
                 sizes="376px"
               />
-              <div className="absolute bottom-0 w-16 h-14 bg-[#FFFFFF] left-6 items-center justify-center flex">
+              <div className="rounded-tl-12 rounded-tr-12 absolute bottom-0 w-16 h-14 left-6 items-center justify-center flex">
                 <Image
                   src={Project.logo}
                   alt="Logo"

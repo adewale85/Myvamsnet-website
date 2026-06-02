@@ -196,6 +196,20 @@ function Testimonies() {
         </div>
       )}
 
+
+   
+    {isMobile && (
+        <div className="flex gap-2 mt-6 lg:hidden self-center">
+          {testimonialsData.map((_, idx) => (
+            <div 
+              key={idx} 
+              className={`h-2 rounded-full transition-all duration-300 ${
+                idx === getActiveDataIndex(currentIndex) ? "w-6 bg-[#007FFF]" : "w-2 bg-[#007FFF]/30"
+              }`}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 }

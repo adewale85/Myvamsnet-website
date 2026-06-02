@@ -37,14 +37,14 @@ export default function Footer() {
       <div className="Inner-wrapper">
         
         {/* Mobile: 2-column Grid | Desktop: Balanced Custom Flex Row */}
-        <div className="grid grid-cols-2 lg:flex lg:flex-row lg:justify-between gap-22 lg:gap-0 items-center justify-between">
+        <div className="grid grid-cols-2 lg:flex lg:flex-row lg:justify-between gap-18 lg:gap-0 items-center justify-between">
           {FOOTER_DATA.map((item, index) => (
             <div 
               key={index} 
               className={`flex flex-col space-y-4 ${item.widthClass || 'w-full items-center justify-center'}`}
             >
               {/* Heading Container */}
-              <div className="flex-col flex gap-2 items-start  items-center justify-start ">
+              <div className="flex-col flex gap-2  justify-start ">
                 {item.imgSrc && (
                   <span className='lg:flex hidden'>
                     <Image
