@@ -1,5 +1,5 @@
 // utils/animations.ts
-import { Variants } from "framer-motion";
+import { Transition, Variants } from "framer-motion";
 
 /**
  * ============================================================================
@@ -18,7 +18,10 @@ export const staggerContainer = (staggerTime = 0.12, delayTime = 0.1) => ({
   },
 });
 
-export const getScrollProps = (onceSetting = false, viewportMargin = "-100px") => ({
+export const getScrollProps = (
+  onceSetting = false,
+  viewportMargin = "-100px",
+) => ({
   initial: "hidden",
   whileInView: "visible",
   viewport: { once: onceSetting, margin: viewportMargin },
@@ -59,18 +62,18 @@ export const scrollClipPathReveal = (delay = 0) => ({
   initial: "hidden",
   whileInView: "visible",
   // ADD THIS LINE: Tells Framer Motion to go back to "hidden" when it leaves the screen
-  whileExit: "hidden", 
-  viewport: { 
-    once: false, 
+  whileExit: "hidden",
+  viewport: {
+    once: false,
     margin: "-100px",
     // ADD THIS LINE: Ensures exit animations are tracked properly by the viewport wrapper
-    amount: "some" as const 
-  }, 
+    amount: "some" as const,
+  },
   variants: {
-    hidden: { 
-      clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", 
+    hidden: {
+      clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
       y: 40,
-      opacity: 0 // Added opacity fallback to guarantee it completely vanishes when off-screen
+      opacity: 0, // Added opacity fallback to guarantee it completely vanishes when off-screen
     },
     visible: {
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
@@ -78,7 +81,7 @@ export const scrollClipPathReveal = (delay = 0) => ({
       opacity: 1,
       transition: {
         duration: 0.85,
-        ease: [0.76, 0, 0.24, 1], 
+        ease: [0.76, 0, 0.24, 1],
         delay,
       },
     },
@@ -87,7 +90,7 @@ export const scrollClipPathReveal = (delay = 0) => ({
 
 export const splitTextMask = (delay = 0): Variants => ({
   hidden: { y: "110%", opacity: 0 },
-  
+
   visible: {
     y: 0,
     opacity: 1,
@@ -97,7 +100,6 @@ export const splitTextMask = (delay = 0): Variants => ({
       delay,
     },
   },
- 
 });
 
 /**
@@ -156,11 +158,19 @@ export const ambientGlowPulse = (minOpacity = 0.3, duration = 3): Variants => ({
  * ============================================================================
  */
 
-export const premiumButtonInteraction = (hoverScale = 1.02, tapScale = 0.96): Variants => ({
+export const premiumButtonInteraction = (
+  hoverScale = 1.02,
+  tapScale = 0.96,
+): Variants => ({
   initial: { scale: 1 },
   hover: {
     scale: hoverScale,
-    transition: { type: "spring" as const, stiffness: 400, damping: 10, mass: 0.8 },
+    transition: {
+      type: "spring" as const,
+      stiffness: 400,
+      damping: 10,
+      mass: 0.8,
+    },
   },
   tap: {
     scale: tapScale,
@@ -227,19 +237,32 @@ export const footerReveal: Variants = {
  * ============================================================================
  */
 
-export const fadeInUp = (yDistance = 15, duration = 0.5, ease = "easeOut"): Variants => ({
+export const fadeInUp = (
+  yDistance = 15,
+  duration = 0.5,
+  ease: Transition ["ease"] = "easeOut",
+): Variants => ({
   hidden: { opacity: 0, y: yDistance },
   visible: { opacity: 1, y: 0, transition: { duration, ease } },
 });
 
-export const slideInDirection = (isReversed: boolean, distance = 40, duration = 0.7, delay = 0.2): Variants => ({
+export const slideInDirection = (
+  isReversed: boolean,
+  distance = 40,
+  duration = 0.7,
+  delay = 0.2,
+): Variants => ({
   hidden: { opacity: 0, x: isReversed ? -distance : distance },
-  visible: { opacity: 1, x: 0, transition: { duration, ease: "easeOut", delay } },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration, ease: "easeOut" as const, delay },
+  },
 });
 
 export const floatingY = (yDistance = 6, durationTime = 4): Variants => ({
   animate: {
     y: [-yDistance, yDistance, -yDistance],
-    transition: { duration: durationTime, repeat: Infinity, ease: "easeInOut" },
+    transition: { duration: durationTime, repeat: Infinity, ease: "easeInOut" as const },
   },
 });
