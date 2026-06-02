@@ -55,7 +55,7 @@ export default function WhatWeDoSection() {
           return (
             <motion.div 
               key={service.badge} 
-              className={`w-full bg-[#FFFFFF] rounded-[32px] overflow-hidden flex flex-col-reverse lg:items-center justify-between border border-black/5
+              className={`w-full bg-[#FFFFFF] rounded-[32px] overflow-hidden flex flex-col-reverse lg:items-center justify-between border border-black/5 lg:mb-40
                 lg:sticky lg:top-[200px] ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row' }`}
               style={{ 
                 zIndex: 40 + index, // Adjusts where cards stack relative to your sticky navbar
