@@ -20,7 +20,7 @@ function LandingPage() {
       <HeroeSection />
       </section>
       <GrowthSection />
-      <div className=' relative  bg-[url("/What_we_do_bg.svg")] bg-cover bg-center bg-no-repeat'>
+      <div className=' relative bg-[url("/What_we_do_bg.svg")] bg-cover bg-center bg-no-repeat items-center justify-center flex'>
         <WhatWeDoSection />
       </div>
       <div className='flex items-center justify-center relative min-h-166.25  bg-[url("/Webuild_bg.svg")] bg-cover bg-center bg-no-repeat'>
