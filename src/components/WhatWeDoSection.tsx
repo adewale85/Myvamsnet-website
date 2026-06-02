@@ -38,8 +38,8 @@ const servicesData = [
 
 export default function WhatWeDoSection() {
   return (
-    <section id="WhatWeDoSection" className="py-16 max-w-7xl Inner-wrapper lg:scroll-mt-22 scroll-mt-12 ">
-      <header className="sticky lg:top-22  z-40 lg:pt-8 flex items-center justify-between gap-6 lg:mb-8">
+    <section id="WhatWeDoSection" className=" max-w-7xl Inner-wrapper lg:scroll-mt-22 scroll-mt-12 ">
+      <header className="sticky lg:top-22 z-40 lg:pt-8 flex items-center justify-between gap-6 lg:mb-8">
         <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
           WHAT WE DO
         </p>
@@ -47,15 +47,14 @@ export default function WhatWeDoSection() {
       </header>
 
      
-      <div className="relative py-6 space-y-6 lg:space-y-0">
+      <div className="relative py-2 space-y-6 lg:space-y-0">
         {servicesData.map((service, index) => {
           const isReversed = index % 2 !== 0;
           
-         
           return (
             <motion.div 
               key={service.badge} 
-              className={`w-full bg-[#FFFFFF] rounded-[32px] overflow-hidden flex flex-col-reverse lg:items-center justify-between border border-black/5 lg:mb-40
+              className={`w-full bg-[#FFFFFF] rounded-[32px] overflow-hidden flex flex-col-reverse lg:items-center justify-between border  lg:my-40
                 lg:sticky lg:top-[200px] ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row' }`}
               style={{ 
                 zIndex: 40 + index, // Adjusts where cards stack relative to your sticky navbar

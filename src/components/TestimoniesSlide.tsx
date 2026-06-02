@@ -28,7 +28,7 @@ const duplicatedCards = [...cardData, ...cardData];
       >
         {duplicatedCards.map((card, index) => (
           <div key={index} className="flex-shrink-0 rounded-3xl">
-           <card.Testimonies/>
+           {/* <card.Testimonies/> */}
           </div>
         ))}
       </motion.div>

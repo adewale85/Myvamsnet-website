@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ReadyToGrow from "./ReadyToGrow";
 import Testimonies from "./Testimonies";
+import TestimoniesSlide from "./TestimoniesSlide";
 
 function HowWeWork() {
   const HowWeWorkData = [

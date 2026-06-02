@@ -73,13 +73,13 @@ function Testimonies() {
             animate={{ x: isPaused ? undefined : ["0%", "-50%"] }}
             transition={{
               repeat: Infinity,
-              duration: 20,
+              duration: isPaused ? 1000000 : 20,
               ease: "linear",
             }}
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
-            {[...testimonialsData, ...testimonialsData].map((data, id) => (
+            {[...testimonialsData, ...testimonialsData,...testimonialsData].map((data, id) => (
               <div
                 key={`desktop-${id}`}
                 className="bg-[#FFFFFF] lg:w-[380px] w-[276px] lg:h-[324px] h-[256px] border-2 border-[#FFFFFF] rounded-[20px] flex items-center justify-center shrink-0"
