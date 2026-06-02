@@ -147,7 +147,7 @@ export const ambientGlowPulse = (minOpacity = 0.3, duration = 3): Variants => ({
     transition: {
       duration,
       repeat: Infinity,
-      ease: "easeInOut",
+      ease: "easeInOut" as const,
     },
   },
 });
@@ -227,7 +227,7 @@ export const footerReveal: Variants = {
     opacity: 1,
     y: 0,
     filter: "blur(0px)",
-    transition: { duration: 0.8, ease: "easeOut" },
+    transition: { duration: 0.8, ease: "easeOut" as const },
   },
 };
 
@@ -240,7 +240,7 @@ export const footerReveal: Variants = {
 export const fadeInUp = (
   yDistance = 15,
   duration = 0.5,
-  ease: Transition ["ease"] = "easeOut",
+  ease: Transition ["ease"] = "easeOut" as const,
 ): Variants => ({
   hidden: { opacity: 0, y: yDistance },
   visible: { opacity: 1, y: 0, transition: { duration, ease } },

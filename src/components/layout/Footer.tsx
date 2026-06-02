@@ -37,7 +37,7 @@ export default function Footer() {
       <div className="Inner-wrapper">
         
         {/* Mobile: 2-column Grid | Desktop: Balanced Custom Flex Row */}
-        <div className="grid grid-cols-2 lg:flex lg:flex-row lg:justify-between gap-12 lg:gap-0 ">
+        <div className="grid grid-cols-2 lg:flex lg:flex-row justify-between gap-26 lg:gap-0 ">
           {FOOTER_DATA.map((item, index) => (
             <div 
               key={index} 
@@ -65,7 +65,7 @@ export default function Footer() {
                     />
                   </span>
                 )}
-                <h3 className="font-heading font-normal text-[18px]  leading-9 text-[#FFFFFF] ">
+                <h3 className="font-heading font-normal text-[18px] leading-9 text-[#FFFFFF] ">
                   {item.title}
                 </h3>
               
@@ -83,7 +83,7 @@ export default function Footer() {
                     <li key={linkIndex}>
                       <Link 
                         href={"#"} 
-                        className="text-[#FFFFFFBF] hover:text-[#D0B8AC] transition-colors text-[14px]"
+                        className="text-[#FFFFFFBF] hover:text-brand-lime transition-colors text-[14px]"
                       >
                         {link}
                       </Link>
