@@ -1,7 +1,12 @@
-
-
+"use client";
+import {
+  fadeInUp,
+  floatingY,
+  scaleUpEntrance,
+  staggerContainer,
+} from "@/utils/animations";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
 
 function OurRecentProject() {
   const ProjectData = [
@@ -10,7 +15,7 @@ function OurRecentProject() {
       description:
         "MyVamsnet is an impact-driven technology company delivering tech-enabled growth for individuals and businesses across Africa and beyond.",
       btnText: "View Project",
-      btnIcon: "/Btn.svg", 
+      btnIcon: "/Btn.svg",
       imgSrc: "/3trive_image.svg",
       imgAlt: "3trive Lab",
       logo: "/3thrive.svg",
@@ -38,20 +43,34 @@ function OurRecentProject() {
   ];
 
   return (
-    
-    <section id="OurRecentProject" className="Inner-wrapper lg:space-y-8 space-y-5 lg:px-0 px-4 w-full lg:scroll-mt-22 scroll-mt-12">
+    <section
+      id="OurRecentProject"
+      className="Inner-wrapper lg:space-y-8 space-y-5 lg:px-0 px-4 w-full lg:scroll-mt-22 scroll-mt-12"
+    >
       <header className="pt-8 flex items-center justify-between gap-6 lg:mb-8 ">
         <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
           OUR RECENT PROJECTS
         </p>
         <div className="lg:w-262 w-full h-1 bg-[#FFFFFF]"></div>
       </header>
-          
-     
-      <div className="flex flex-col lg:flex-row lg:justify-center lg:gap-8 gap-6 w-full">
+
+      <motion.div
+        variants={staggerContainer(0.15, 0.1)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, margin: "-100px" }}
+        className="flex flex-col lg:flex-row lg:justify-center lg:gap-8 gap-6 w-full"
+      >
         {ProjectData.map((Project, id) => (
-          <div
+          <motion.div
             key={id}
+            variants={scaleUpEntrance(0.6)}
+            whileHover={{
+              y: -8,
+              scale: 1.015,
+              boxShadow: "0px 20px 40px rgba(0, 127, 255, 0.15)",
+            }}
+            transition={{ type: "spring", stiffness: 300, damping: 22 }}
             className="lg:w-[376px] w-full lg:h-[571px] h-[527px] bg-[radial-gradient(circle_at_center,#007FFF_0%,_#004C99_90%,_#004C99_100%)] rounded-3xl overflow-hidden flex flex-col lg:space-y-3 space-y-6 items-center"
           >
             {/* Image Container */}
@@ -68,8 +87,8 @@ function OurRecentProject() {
                   src={Project.logo}
                   alt="Logo"
                   width={64}
-                  height={56}              
-                   className="object-contain object-center "
+                  height={56}
+                  className="object-contain object-center "
                 />
               </div>
             </div>
@@ -77,32 +96,38 @@ function OurRecentProject() {
             {/* Text & Action Content */}
             <div className="flex flex-col items-center justify-center lg:w-[312px] w-[303px] lg:space-y-6 space-y-4">
               <div className="lg:space-y-5 space-y-3">
-                <p className="font-bold lg:text-[20px] text-[16px] leading-9 text-[#FFFFFF] ">
+                <motion.p
+                  variants={fadeInUp(12, 0.5)}
+                  className="font-bold lg:text-[20px] text-[16px] leading-9 text-[#FFFFFF] "
+                >
                   {Project.badge}
-                </p>
-                <p className="font-normal text-[16px] lg:text-[20px] leading-9 text-[#FFFFFFCC]">
+                </motion.p>
+                <motion.p
+                  variants={floatingY(12, 0.5)}
+                  className="font-normal text-[16px] lg:text-[20px] leading-9 text-[#FFFFFFCC]"
+                >
                   {Project.description}
-                </p>
+                </motion.p>
               </div>
 
               <div className="w-full items-end justify-end flex">
                 <button className="font-normal text-[12px] leading-4 font-heading text-[#FFFFFF] flex items-center gap-2 hover:underline hover:translate-x-2 transition-transform">
                   {Project.btnText}
-                  <Image
-                    src={Project.btnIcon}
-                    alt=""
-                    width={20}
-                    height={20}
-                  />
+                  <Image src={Project.btnIcon} alt="" width={20} height={20} />
                 </button>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
-      
-      <div className="Inner-wrapper mx-auto w-full lg:h-[214px] h-[567px] bg-brand-lime rounded-4xl border-4 border-[#FFFFFF] flex lg:flex-row flex-col items-center justify-center p-6">
+      <motion.div
+        initial={{ opacity: 0, y: 40, scale: 0.98 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: false, margin: "-60px" }}
+        transition={{ type: "spring", stiffness: 180, damping: 20 }}
+        className="Inner-wrapper mx-auto w-full lg:h-[214px] h-[567px] bg-brand-lime rounded-4xl border-4 border-[#FFFFFF] flex lg:flex-row flex-col items-center justify-center p-6"
+      >
         <div className="flex lg:flex-row flex-col items-center justify-between gap-8 w-full max-w-[1100px]">
           <Image
             src="/slot_image.svg"
@@ -112,18 +137,31 @@ function OurRecentProject() {
             className="rounded-4xl"
           />
           <div>
-            <p className="lg:w-[580px] xl:w-[685px] w-[286px] font-normal lg:text-[20px] text-[16px] leading-8 lg:text-left text-center text-slate-900"> 
-              You know exactly what your industry needs. So why isn't your product live yet? You're not afraid of the project. You're afraid of wasting time and money on something that won't work. 
+            <p className="lg:w-[580px] xl:w-[685px] w-[286px] font-normal lg:text-[20px] text-[16px] leading-8 lg:text-left text-center text-slate-900">
+              You know exactly what your industry needs. So why isn't your
+              product live yet? You're not afraid of the project. You're afraid
+              of wasting time and money on something that won't work.
             </p>
           </div>
           <div className="w-59.25 flex flex-col items-center justify-center gap-2">
-            <h5 className="font-bold lg:text-[24px] xl:text-[28px] text-[24px] leading-8 text-[#FF5369] whitespace-nowrap">Only 4 slots left</h5>
-            <button className="w-full h-[52px] font-normal text-[14px] font-heading rounded-xl text-brand-lime leading-[100%] border border-[#007FFF] bg-[#007FFF] hover:bg-[#006fde] hover:text-white transition-colors whitespace-nowrap px-4">
+            <motion.h5
+              animate={{ scale: [1, 1.05, 1] }}
+              transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
+              className="font-bold lg:text-[24px] xl:text-[28px] text-[24px] leading-8 text-[#FF5369] whitespace-nowrap"
+            >
+              Only 4 slots left
+            </motion.h5>
+            <motion.button
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: "spring", stiffness: 400, damping: 15 }}
+              className="w-full h-[52px] font-normal text-[14px] font-heading rounded-xl text-brand-lime leading-[100%] border border-[#007FFF] bg-[#007FFF] hover:bg-[#006fde] hover:text-white transition-colors whitespace-nowrap px-4"
+            >
               Book Clarity Call Now!
-            </button>
+            </motion.button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

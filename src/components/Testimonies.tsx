@@ -82,7 +82,7 @@ function Testimonies() {
             {[...testimonialsData, ...testimonialsData].map((data, id) => (
               <div
                 key={`desktop-${id}`}
-                className="bg-[#FFFFFF] lg:w-[380px] w-[276px] lg:h-[324px] h-[256px] border-2 border-[#FFFFFF] rounded-3xl flex items-center justify-center shrink-0 shadow-sm"
+                className="bg-[#FFFFFF] lg:w-[380px] w-[276px] lg:h-[324px] h-[256px] border-2 border-[#FFFFFF] rounded-[20px] flex items-center justify-center shrink-0"
               >
                 <div className="w-[316px] h-[260px] space-y-4 flex flex-col justify-center">
                   <div className="flex gap-2 text-amber-500">
@@ -156,7 +156,7 @@ function Testimonies() {
                     zIndex: offsetIndex === 0 ? 10 : 1,
                   }}
                   transition={{ type: "spring", stiffness: 300, damping: 32 }}
-                  className="bg-[#FFFFFF] w-[86vw] h-[256px] border-2 border-[#FFFFFF] rounded-3xl flex items-center justify-center shrink-0 shadow-sm pointer-events-none"
+                  className="bg-[#FFFFFF] w-[86vw] h-[256px] border-2 border-[#FFFFFF] rounded-[20px] flex items-center justify-center shrink-0 pointer-events-none"
                 >
                   <div className="w-full max-w-[316px] h-[260px] space-y-4 flex flex-col justify-center px-4">
                     <div className="flex gap-2 text-amber-500 w-full items-center">

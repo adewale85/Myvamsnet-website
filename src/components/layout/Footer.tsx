@@ -97,14 +97,14 @@ export default function Footer() {
         </div>
 
         {/* Bottom Socials & Support Row */}
-        <div className="lg:my-8 py-8 border-y border-white/10 flex flex-col lg:flex-row items-center justify-between gap-6 text-sm text-[#FFFFFFBF]">
+        <div className="lg:my-8 mt-12 py-8 border-y border-white/10 flex flex-col lg:flex-row items-center justify-between gap-6 text-sm text-[#FFFFFFBF]">
           <p>© 2026 MyVamsnet Ltd. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <p className="hover:text-white transition-colors cursor-pointer">Support@myvamsnet.com</p>
             <div className="flex items-center gap-4 text-xl">
-              <a href="#" className="hover:text-[#D0B8AC] transition-colors"><FaFacebook /></a>
-              <a href="#" className="hover:text-[#D0B8AC] transition-colors"><GrInstagram /></a>
-              <a href="#" className="hover:text-[#D0B8AC] transition-colors text-2xl"><TiSocialLinkedinCircular /></a>
+              <a href="#" className="hover:text-[#D0B8AC] transition-colors"><FaFacebook size={20} /></a>
+              <a href="#" className="hover:text-[#D0B8AC] transition-colors"><GrInstagram size={20} /></a>
+              <a href="#" className="hover:text-[#D0B8AC] transition-colors "><TiSocialLinkedinCircular size={30} /></a>
             </div>
           </div>
         </div>

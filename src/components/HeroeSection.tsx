@@ -1,14 +1,23 @@
+"use client";
+import { motion } from "framer-motion";
 import HeroeCard from "./HeroeCard";
 import HeroeprojectNames from "./HeroeprojectNames";
+import { scrollClipPathReveal, splitTextMask, staggerContainer } from "@/utils/animations";
 
 
 function HeroeSection() {
   return (
     <section className="lg:space-y-22 space-y-5 lg:pt-6">
    
-      <div className="Inner-wrapper flex flex-col gap-8 ">
+      <motion.div 
+      variants={staggerContainer(0.15, 0.2)}
+      initial="hidden"
+      animate="visible"
+      className="Inner-wrapper flex flex-col gap-8 ">
         <div className="lg:h-75.5 items-center lg:pt-22 justify-center lg:space-y-8 space-y-5">
-        <h1 className="w-full font-heading font-normal lg:text-[68px] text-[40px] lg:leading-22 leading-12.5 text-white">
+        <motion.h1 
+       
+        className="w-full font-heading font-normal lg:text-[68px] text-[40px] lg:leading-22 leading-12.5 text-white">
           Empowering {" "}
           <br className="lg:hidden" /> 
           you with{" "}
@@ -19,8 +28,8 @@ function HeroeSection() {
           <br className="lg:hidden" />
           
           <span className="lg:text-white">{" "} and</span>{" "}
-          <span className="text-[#007FFF]">innovation</span>
-        </h1>
+          <motion.span variants={splitTextMask(1)} className="text-[#007FFF]">innovation</motion.span>
+        </motion.h1>
 
         <p className="lg:w-[906px] w-full lg:text-[20px] text-[18px] font-normal text-white/75 leading-relaxed lg:leading-[1.2]">
           We deliver tech-enabled growth for individuals and businesses across
@@ -35,7 +44,7 @@ function HeroeSection() {
             Contact us
           </button>
         </div>
-      </div>
+      </motion.div>
    
       <div className="">
       <HeroeCard />
