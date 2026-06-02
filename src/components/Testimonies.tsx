@@ -1,8 +1,6 @@
 "use client";
 
-
-
-import { PanInfo, motion} from "framer-motion";
+import { PanInfo, motion } from "framer-motion";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
@@ -42,39 +40,34 @@ function Testimonies() {
     return () => window.removeEventListener("resize", checkViewport);
   }, []);
 
-  // FIXED DUPLICATION STACK: Duplicating exactly once gives a perfect clean half-split match
-  const duplicatedData = [
-  ...testimonialsData,
-  ...testimonialsData,
-  ...testimonialsData,
-  ...testimonialsData,
-];
+  const getActiveDataIndex = (index: number) => {
+    const len = testimonialsData.length;
+    return ((index % len) + len) % len;
+  };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonialsData.length);
+    setCurrentIndex((prev) => prev + 1);
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonialsData.length) % testimonialsData.length);
+    setCurrentIndex((prev) => prev - 1);
   };
 
- const handleDragEnd = (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
-  if (info.offset.x < -50) {
-    handleNext();
-  } else if (info.offset.x > 50) {
-    handlePrev();
-  }
-};
+  const handleDragEnd = (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+    if (info.offset.x < -40 || info.velocity.x < -200) {
+      handleNext();
+    } else if (info.offset.x > 40 || info.velocity.x > 200) {
+      handlePrev();
+    }
+  };
 
   return (
-    // FIXED CONTAINER: Added layout constraints (max-w-full) to keep the wrapper locked tightly
     <section className="overflow-hidden w-full max-w-full py-10 flex flex-col items-start lg:items-center">
       
       {/* 1. DESKTOP INFINITE TICKER */}
       {!isMobile && (
-        <div className="w-full overflow-hidden flex lg:flex hidden">
+        <div className="w-full overflow-hidden lg:flex hidden">
           <motion.div
-            // FIXED CLASSES: Used select layout restrictions (inline-flex) with clear flex-nowrap to squeeze out all extra whitespace boundaries
             className="flex flex-nowrap gap-8 items-center cursor-pointer select-none"
             style={{ willChange: "transform" }}
             animate={{ x: isPaused ? undefined : ["0%", "-50%"] }}
@@ -86,7 +79,7 @@ function Testimonies() {
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
-            {duplicatedData.map((data, id) => (
+            {[...testimonialsData, ...testimonialsData].map((data, id) => (
               <div
                 key={`desktop-${id}`}
                 className="bg-[#FFFFFF] lg:w-[380px] w-[276px] lg:h-[324px] h-[256px] border-2 border-[#FFFFFF] rounded-3xl flex items-center justify-center shrink-0 shadow-sm"
@@ -128,71 +121,81 @@ function Testimonies() {
         </div>
       )}
 
-      {/* 2. MOBILE HAND-SWAP SLIDER */}
+      {/* 2. MOBILE TRUE UNENDING MANUAL CAROUSEL WITH 10% RIGHT PEEK */}
       {isMobile && (
-        <motion.div
-          className="flex w-max gap-4 items-center cursor-pointer lg:hidden px-4"
-          style={{ willChange: "transform" }}
-          animate={{ x: `calc(-${currentIndex * 84}% - ${currentIndex * 16}px)` }}
-          transition={{ type: "spring", stiffness: 300, damping: 32 }}
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          onDragEnd={handleDragEnd}
-        >
-          {testimonialsData.map((data, id) => (
-            <div
-              key={`mobile-${id}`}
-              className="bg-[#FFFFFF] w-[84vw] h-[256px] border-2 border-[#FFFFFF] rounded-3xl flex items-center justify-center shrink-0 shadow-sm"
-            >
-              <div className="w-full max-w-[316px] h-[260px] space-y-4 flex flex-col justify-center px-4">
-                <div className="flex gap-2 text-amber-500 w-full items-center">
-                  {Array.from({ length: data.stars }).map((_, index) => (
-                    <span key={index}>
-                      <Image src="/Rate_Icon.svg" alt="" width={20} height={20} />
-                    </span>
-                  ))}
-                </div>
+        <div className="w-full overflow-hidden px-4 relative min-h-[260px] flex items-center justify-start">
+          <motion.div
+            // Width is set to 86vw so the card size leaves exactly enough screen estate on the right edge
+            className="relative w-[86vw] h-[256px] cursor-grab active:cursor-grabbing lg:hidden"
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            onDragEnd={handleDragEnd}
+          >
+            {testimonialsData.map((data, id) => {
+              let offsetIndex = id - getActiveDataIndex(currentIndex);
+              
+              // Wrapping structure logic loop
+              if (offsetIndex < -1) offsetIndex += testimonialsData.length;
+              if (offsetIndex > 1) offsetIndex -= testimonialsData.length;
 
-                <p className="w-full text-[15px] leading-6 font-normal text-[#232B33]">
-                  "{data.quote}"
-                </p>
+              // CUSTOM POSITIONAL PEAK MATH: 
+              // If it's the previous card (offsetIndex === -1), hide it off-screen to the left completely (-120%)
+              // If it's the next card (offsetIndex === 1), set it to 104% so it subtly peeks onto the screen by ~10%
+              let translateX = `${offsetIndex * 104}%`;
+              if (offsetIndex === -1) {
+                translateX = "-130%"; 
+              }
 
-                <div className="flex gap-3 justify-start w-full items-center">
-                  <Image
-                    src={data.avatarSrc}
-                    alt={data.name}
-                    width={48}
-                    height={48}
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
-                  <div className="text-left">
-                    <h4 className="font-normal text-[16px] text-[#232B33] font-heading">
-                      {data.name}
-                    </h4>
-                    <p className="text-[14px] font-normal text-[#232B33BF]">
-                      {data.role}
+              return (
+                <motion.div
+                  key={`mobile-infinite-${id}`}
+                  style={{ position: "absolute", top: 0, left: 0 }}
+                  animate={{
+                    x: translateX,
+                    opacity: offsetIndex === -1 ? 0 : 1, // Completely hides the left card visually to clean up the edge
+                    zIndex: offsetIndex === 0 ? 10 : 1,
+                  }}
+                  transition={{ type: "spring", stiffness: 300, damping: 32 }}
+                  className="bg-[#FFFFFF] w-[86vw] h-[256px] border-2 border-[#FFFFFF] rounded-3xl flex items-center justify-center shrink-0 shadow-sm pointer-events-none"
+                >
+                  <div className="w-full max-w-[316px] h-[260px] space-y-4 flex flex-col justify-center px-4">
+                    <div className="flex gap-2 text-amber-500 w-full items-center">
+                      {Array.from({ length: data.stars }).map((_, index) => (
+                        <span key={index}>
+                          <Image src="/Rate_Icon.svg" alt="" width={20} height={20} />
+                        </span>
+                      ))}
+                    </div>
+
+                    <p className="w-full text-[15px] leading-6 font-normal text-[#232B33]">
+                      "{data.quote}"
                     </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </motion.div>
-      )}
 
-      {/* Mobile Pagination Dots */}
-      {isMobile && (
-        <div className="flex gap-2 mt-6 lg:hidden self-center">
-          {testimonialsData.map((_, idx) => (
-            <div 
-              key={idx} 
-              className={`h-2 rounded-full transition-all duration-300 ${
-                idx === currentIndex ? "w-6 bg-[#007FFF]" : "w-2 bg-[#007FFF]/30"
-              }`}
-            />
-          ))}
+                    <div className="flex gap-3 justify-start w-full items-center">
+                      <Image
+                        src={data.avatarSrc}
+                        alt={data.name}
+                        width={48}
+                        height={48}
+                        className="w-12 h-12 rounded-full object-cover"
+                      />
+                      <div className="text-left">
+                        <h4 className="font-normal text-[16px] text-[#232B33] font-heading">
+                          {data.name}
+                        </h4>
+                        <p className="text-[14px] font-normal text-[#232B33BF]">
+                          {data.role}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
         </div>
       )}
+
     </section>
   );
 }

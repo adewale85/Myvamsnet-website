@@ -1,4 +1,5 @@
-// OurRecentProject.jsx
+
+
 import Image from "next/image";
 import React from "react";
 
@@ -12,6 +13,7 @@ function OurRecentProject() {
       btnIcon: "/Btn.svg", 
       imgSrc: "/3trive_image.svg",
       imgAlt: "3trive Lab",
+      logo: "/3thrive.svg",
     },
     {
       badge: "Angy Care Home",
@@ -21,6 +23,7 @@ function OurRecentProject() {
       btnIcon: "/Btn.svg",
       imgSrc: "/Angy care_image.svg",
       imgAlt: "Angy Care Home",
+      logo: "/Angycare.svg",
     },
     {
       badge: "Mtrackr",
@@ -30,6 +33,7 @@ function OurRecentProject() {
       btnIcon: "/Btn.svg",
       imgSrc: "/Mtrackr_image.svg",
       imgAlt: "Mtrackr",
+      logo: "/Mtrackr.svg",
     },
   ];
 
@@ -59,6 +63,15 @@ function OurRecentProject() {
                 className="object-cover object-center"
                 sizes="376px"
               />
+              <div className="absolute bottom-0 w-16 h-14 bg-[#FFFFFF] left-6 items-center justify-center flex">
+                <Image
+                  src={Project.logo}
+                  alt="Logo"
+                  width={64}
+                  height={56}              
+                   className="object-contain object-center "
+                />
+              </div>
             </div>
 
             {/* Text & Action Content */}

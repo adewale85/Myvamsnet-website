@@ -99,17 +99,19 @@ export const getScrollProps = (
  * Perfect for your action buttons ("Partner with us", "Join our Team").
  * Instead of rigid transitions, this mimics high-end tactile hardware.
  */
-export const premiumButtonInteraction = {
+// utils/animations.ts
+
+export const premiumButtonInteraction = (hoverScale = 1.02, tapScale = 0.96) => ({
   initial: { scale: 1 },
   hover: { 
-    scale: 1.02,
-    transition: { type: "spring", stiffness: 400, damping: 10, mass: 0.8 } 
+    scale: hoverScale,
+    transition: { type: "spring" as const, stiffness: 400, damping: 10, mass: 0.8 } 
   },
   tap: { 
-    scale: 0.96,
-    transition: { type: "spring", stiffness: 500, damping: 15 } 
+    scale: tapScale,
+    transition: { type: "spring" as const, stiffness: 500, damping: 15 } 
   }
-};
+});
 
 /**
  * 7. Modern Split-Text Reveal (Letter Stacking)
