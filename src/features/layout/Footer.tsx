@@ -103,9 +103,9 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <p className="hover:text-white transition-colors cursor-pointer">Support@myvamsnet.com</p>
             <div className="flex items-center gap-4 text-xl">
-              <a href="#" className="hover:text-[#D0B8AC] transition-colors"><Image src="/Facebook.svg" alt="Facebook" width={20} height={20} /></a>
-              <a href="#" className="hover:text-[#D0B8AC] transition-colors"><Image src="/Instagram.svg" alt="Instagram" width={20} height={20} /></a>
-              <a href="#" className="hover:text-[#D0B8AC] transition-colors "><Image src="/LinkedIn.svg" alt="LinkedIn" width={20} height={20} /></a>
+              <a href="#" className="hover:text-[#D0B8AC] transition-colors"><Image src="/Facebook.svg" alt="Facebook" width={25} height={25} /></a>
+              <a href="#" className="hover:text-[#D0B8AC] transition-colors"><Image src="/Instagram.svg" alt="Instagram" width={30} height={30} /></a>
+              <a href="#" className="hover:text-[#D0B8AC] transition-colors "><Image src="/LinkedIn.svg" alt="LinkedIn" width={30} height={30} /></a>
             </div>
           </div>
         </div>
