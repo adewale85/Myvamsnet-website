@@ -1,4 +1,4 @@
-import LandingPage from '@/components/LandingPage'
+import LandingPage from '@/features/landing-page/LandingPage'
 
 
 function page() {

@@ -82,7 +82,7 @@ function OurRecentProject() {
                 className="object-cover object-center"
                 sizes="376px"
               />
-              <div className="rounded-tl-12 rounded-tr-12 absolute bottom-0 w-16 h-14 left-6 items-center justify-center flex">
+              <div className="rounded-tl-12 rounded-tr-12 absolute bottom-0 left-6 items-center justify-center flex">
                 <Image
                   src={Project.logo}
                   alt="Logo"

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 // 1. Import your specific fonts
 import { Russo_One, Space_Grotesk, Geist } from "next/font/google"; 
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+import Navbar from "@/features/layout/Navbar";
+import Footer from "@/features/layout/Footer";
 import { cn } from "@/lib/utils";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});

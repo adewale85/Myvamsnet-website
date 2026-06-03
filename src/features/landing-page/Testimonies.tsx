@@ -199,7 +199,7 @@ function Testimonies() {
 
    
     {isMobile && (
-        <div className="flex gap-2 mt-6 lg:hidden self-center">
+        <div className="flex gap-2 mt-6 mb-2 lg:hidden self-center">
           {testimonialsData.map((_, idx) => (
             <div 
               key={idx} 

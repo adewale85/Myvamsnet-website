@@ -1,12 +1,11 @@
-import { Button } from '@/components/ui/button'
+
 import React from 'react'
+import LandingPage from './LandingPage'
 
 const index = () => {
   return (
-    <div>index
-        <Button>
-            Save here
-        </Button>
+    <div>
+        <LandingPage/>
     </div>
   )
 }

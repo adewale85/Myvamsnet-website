@@ -1,7 +1,7 @@
 import Image from "next/image";
 import ReadyToGrow from "./ReadyToGrow";
 import Testimonies from "./Testimonies";
-import TestimoniesSlide from "./TestimoniesSlide";
+
 
 function HowWeWork() {
   const HowWeWorkData = [
@@ -27,9 +27,9 @@ function HowWeWork() {
 
   return (
     <>
-      <section className="lg:py-12 py-12 block w-full">
+      <section className="lg:py-12  block w-full">
         {/* Header */}
-        <header className="Inner-wrapper flex items-center justify-between gap-6 mb-5">
+        <header className="Inner-wrapper flex items-center justify-between gap-6 mb-5  lg:mt-0 mt-12">
           <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
             HOW WE WORK
           </p>
@@ -89,7 +89,7 @@ function HowWeWork() {
         </div>
 
         {/* Testimonies */}
-        <div className="w-full lg:mb-0 lg:mt-12 mt-0 lg:mb-20">
+        <div className="w-full lg:mt-12 mt-0 ">
           <Testimonies />
         </div>
       </section>

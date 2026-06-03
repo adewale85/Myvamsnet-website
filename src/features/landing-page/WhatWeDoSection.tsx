@@ -50,11 +50,10 @@ export default function WhatWeDoSection() {
       id="WhatWeDoSection"
       className="max-w-7xl Inner-wrapper lg:scroll-mt-22 scroll-mt-12 lg:pt-2 pt-10"
     >
-      <header className="Inner-wrapper sticky lg:top-22 z-40 lg:pt-12 pt-4 flex items-center justify-between gap-6">
+      <header className="pt-8 flex items-center justify-between gap-6 lg:mb-8 ">
         <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
           WHAT WE DO
         </p>
-
         <div className="lg:w-262 w-full h-1 bg-[#FFFFFF]"></div>
       </header>
 
