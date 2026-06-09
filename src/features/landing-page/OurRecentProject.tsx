@@ -97,7 +97,7 @@ function OurRecentProject() {
             </div>
 
             {/* Text & Action Content */}
-            <div className="flex flex-col items-center justify-center lg:w-[312px] w-[303px] lg:space-y-6 space-y-4 lg:py-2">
+            <div className="flex flex-col items-center justify-center lg:w-[312px] w-[299px] lg:space-y-6 space-y-4 lg:py-2">
               <div className="space-y-2 ">
                 <motion.p
                   variants={fadeInUp(12, 0.5)}
