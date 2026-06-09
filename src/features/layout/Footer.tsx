@@ -84,7 +84,7 @@ export default function Footer() {
                     <li key={linkIndex}>
                       <Link 
                         href={"#"} 
-                        className="text-[#FFFFFFBF] hover:text-brand-lime transition-colors text-[14px]"
+                        className="text-[#FFFFFFBF] hover:text-brand-lime transition-colors text-[16px]"
                       >
                         {link}
                       </Link>

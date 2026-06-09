@@ -32,15 +32,13 @@ const servicesData = [
   },
   {
     badge: "TRAINING & INITIATIVES",
-    heading:
-      "Equipping you with skills & opportunities for growth.",
+    heading: "Equipping you with skills & opportunities for growth.",
     description:
       "We empower you with practical skills, knowledge, and opportunities to thrive in the digital world.",
     btnText: "Check Opportunities",
     btnLink: "/academy",
     imgSrc: "/traning_image.svg",
-    imgAlt:
-      "Instructor pointing at a mobile application UI on a projector screen",
+    imgAlt: "Instructor pointing at a mobile application UI on a projector screen",
   },
 ];
 
@@ -50,122 +48,116 @@ export default function WhatWeDoSection() {
       id="WhatWeDoSection"
       className="max-w-7xl Inner-wrapper lg:scroll-mt-22 scroll-mt-12 lg:pt-2 pt-10"
     >
-      <header className="pt-8 flex items-center justify-between gap-6 lg:mb-8 ">
-        <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
-          WHAT WE DO
-        </p>
-        <div className="lg:w-262 w-full h-1 bg-[#FFFFFF]"></div>
-      </header>
+      {/* We use an outer wrapper that allows the header and cards to interact on desktop.
+        On desktop, it switches to a flex column layout where the header acts as a sticky anchor.
+      */}
+      <div className="relative flex flex-col w-full lg:mb-24">
+        
+        {/* Header: Made sticky on desktop to activate simultaneously with the first card */}
+        <header className="pt-10 flex items-center justify-between gap-6 lg:mb-8 lg:sticky lg:top-28  pointer-events-none">
+          <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap pointer-events-auto">
+            WHAT WE DO
+          </p>
+          <div className="lg:w-262 w-full h-1 bg-[#FFFFFF] pointer-events-auto"></div>
+        </header>
 
-      <div className="relative lg:py-2 py-6 lg:mb-0 mb-6 space-y-8 lg:space-y-0">
-        {servicesData.map((service, index) => {
-          const isReversed = index % 2 !== 0;
+        {/* Cards Container */}
+        <div className="relative lg:py-2 py-6 lg:mb-0 mb-6 space-y-8 lg:space-y-0">
+          {servicesData.map((service, index) => {
+            const isReversed = index % 2 !== 0;
 
-          return (
-            <motion.div
-              key={service.badge}
-              className={`w-full rounded-[32px] overflow-hidden flex flex-col-reverse lg:items-center justify-between border lg:mt-40 lg:mb-12
-                lg:sticky lg:top-[200px] ${
-                  isReversed
-                    ? "lg:flex-row-reverse"
-                    : "lg:flex-row"
-                }`}
-              style={{
-                zIndex: 40 + index,
-              }}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
-              transition={{
-                duration: 0.6,
-                ease: "easeOut",
-              }}
-              whileHover={{
-                scale: 1.005,
-                borderColor:
-                  "rgba(0, 127, 255, 0.2)",
-              }}
-            >
-              {/* Content Block Wrapper */}
+            return (
               <motion.div
-                variants={staggerContainer(0.12, 0.1)}
-                initial="hidden"
-                whileInView="visible"
+                key={service.badge}
+                className={`w-full rounded-[32px] overflow-hidden flex flex-col-reverse lg:items-center justify-between border lg:mt-35
+                  lg:sticky lg:top-[200px] ${
+                    isReversed ? "lg:flex-row-reverse" : "lg:flex-row"
+                  }`}
+                style={{
+                  zIndex: 40 + index,
+                }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
-                className="w-full lg:w-[600px] lg:h-[565px] min-h-[422px] h-auto flex items-center justify-center p-5 lg:p-0 bg-white space-y-3"
+                transition={{
+                  duration: 0.6,
+                  ease: "easeOut",
+                }}
+                whileHover={{
+                  scale: 1.005,
+                  borderColor: "rgba(0, 127, 255, 0.2)",
+                }}
               >
-                <div className="w-full lg:w-[504px] space-y-4 lg:space-y-5">
-                  <motion.div
-                    variants={fadeInUp(15, 0.5)}
-                    className="inline-block"
-                  >
-                    <span className="font-normal lg:text-[16px] text-[12px] leading-[100%] font-heading text-[#007FFF] bg-[#EEF6FF] rounded-full px-4 py-2">
-                      {service.badge}
-                    </span>
-                  </motion.div>
-
-                  <motion.h3
-                    variants={fadeInUp(20, 0.5)}
-                    className="font-bold text-[28px] lg:text-[48px] lg:leading-17 leading-10 text-[#232B33]"
-                  >
-                    {service.heading}
-                  </motion.h3>
-
-                  <motion.p
-                    variants={fadeInUp(15, 0.5)}
-                    className="font-normal text-[16px] text-[#232B33BF] lg:text-[20px] lg:leading-9 leading-8"
-                  >
-                    {service.description}
-                  </motion.p>
-
-                  <motion.div
-                    variants={fadeInUp(10, 0.4)}
-                  >
-                    <Link
-                      href={service.btnLink}
-                      className="block"
+                {/* Content Block Wrapper */}
+                <motion.div
+                  variants={staggerContainer(0.12, 0.1)}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false }}
+                  className="w-full lg:w-[600px] lg:h-[565px] min-h-[422px] h-auto flex items-center justify-center p-5 lg:p-0 bg-white space-y-3"
+                >
+                  <div className="w-full lg:w-[504px] space-y-4 lg:space-y-5">
+                    <motion.div
+                      variants={fadeInUp(15, 0.5)}
+                      className="inline-block"
                     >
-                      <motion.button
-                        className="w-full h-[52px] font-bold text-[16px] rounded-xl lg:text-[#ffffff] border border-[#C7FF01] text-brand-lime leading-[100%] bg-brand-blue lg:hover:bg-[#006fde]"
-                        whileHover={{
-                          scale: 1.02,
-                          backgroundColor:
-                            "#007FFF",
-                          color: "#C7FF01",
-                        }}
-                        whileTap={{ scale: 0.98 }}
-                      >
-                        {service.btnText}
-                      </motion.button>
-                    </Link>
-                  </motion.div>
-                </div>
-              </motion.div>
+                      <span className="font-normal lg:text-[16px] text-[12px] leading-[100%] font-heading text-[#007FFF] bg-[#EEF6FF] rounded-full px-4 py-2">
+                        {service.badge}
+                      </span>
+                    </motion.div>
 
-              {/* Image Block Wrapper */}
-              <motion.div
-                className="w-full lg:w-[600px] h-[300px] lg:h-[565px] relative"
-                variants={slideInDirection(
-                  isReversed,
-                  35,
-                  0.6,
-                  0.15
-                )}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false }}
-              >
-                <Image
-                  src={service.imgSrc}
-                  alt={service.imgAlt}
-                  fill
-                  className="object-cover object-center"
-                  sizes="w-full lg:w-[600px] h-auto lg:h-[565px]"
-                />
+                    <motion.h3
+                      variants={fadeInUp(20, 0.5)}
+                      className="font-bold text-[28px] lg:text-[48px] lg:leading-17 leading-10 text-[#232B33]"
+                    >
+                      {service.heading}
+                    </motion.h3>
+
+                    <motion.p
+                      variants={fadeInUp(15, 0.5)}
+                      className="font-normal text-[16px] text-[#232B33BF] lg:text-[20px] lg:leading-9 leading-8"
+                    >
+                      {service.description}
+                    </motion.p>
+
+                    <motion.div variants={fadeInUp(10, 0.4)}>
+                      <Link href={service.btnLink} className="block">
+                        <motion.button
+                          className="w-full h-[52px] font-bold text-[16px] rounded-xl lg:text-[#ffffff] border border-[#C7FF01] text-brand-lime leading-[100%] bg-brand-blue lg:hover:bg-[#006fde]"
+                          whileHover={{
+                            scale: 1.02,
+                            backgroundColor: "#007FFF",
+                            color: "#C7FF01",
+                          }}
+                          whileTap={{ scale: 0.98 }}
+                        >
+                          {service.btnText}
+                        </motion.button>
+                      </Link>
+                    </motion.div>
+                  </div>
+                </motion.div>
+
+                {/* Image Block Wrapper */}
+                <motion.div
+                  className="w-full lg:w-[600px] h-[300px] lg:h-[565px] relative"
+                  variants={slideInDirection(isReversed, 35, 0.6, 0.15)}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false }}
+                >
+                  <Image
+                    src={service.imgSrc}
+                    alt={service.imgAlt}
+                    fill
+                    className="object-cover object-center"
+                    sizes="w-full lg:w-[600px] h-auto lg:h-[565px]"
+                  />
+                </motion.div>
               </motion.div>
-            </motion.div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </section>
   );

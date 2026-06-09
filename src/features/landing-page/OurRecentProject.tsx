@@ -16,21 +16,12 @@ function OurRecentProject() {
         "MyVamsnet is an impact-driven technology company delivering tech-enabled growth for individuals and businesses across Africa and beyond.",
       btnText: "View Project",
       btnIcon: "/Btn.svg",
-      imgSrc: "/3trive.svg",
+      imgSrc: "/3trive Lab.svg",
       imgAlt: "3trive Lab",
-      logo: "/3trive_logo.svg",
+      logo: "/3trivelab Logo.svg",
     },
-    {
-      badge: "Angy Care Home",
-      description:
-        "MyVamsnet is an impact-driven technology company delivering tech-enabled growth for individuals and businesses across Africa and beyond.",
-      btnText: "View Project",
-      btnIcon: "/Btn.svg",
-      imgSrc: "/Angycare.svg",
-      imgAlt: "Angy Care Home",
-      logo: "/Angycare_logo.png",
-    },
-    {
+
+     {
       badge: "Mtrackr",
       description:
         "MyVamsnet is an impact-driven technology company delivering tech-enabled growth for individuals and businesses across Africa and beyond.",
@@ -40,6 +31,18 @@ function OurRecentProject() {
       imgAlt: "Mtrackr",
       logo: "/Mtrackr_logo.svg",
     },
+    
+    {
+      badge: "Angy Care Home",
+      description:
+        "MyVamsnet is an impact-driven technology company delivering tech-enabled growth for individuals and businesses across Africa and beyond.",
+      btnText: "View Project",
+      btnIcon: "/Btn.svg",
+      imgSrc: "/Angy Care Home.svg",
+      imgAlt: "Angy Care Home",
+      logo: "/Angycare_logo.png",
+    },
+   
   ];
 
   return (
@@ -82,7 +85,7 @@ function OurRecentProject() {
                 className="object-cover object-center"
                 sizes="376px"
               />
-              <div className="rounded-tl-12 rounded-tr-12 absolute bottom-0 left-6 items-center justify-center flex">
+              <div className="rounded-tl-12 rounded-tr-12  absolute bottom-0 left-6 items-center justify-center flex">
                 <Image
                   src={Project.logo}
                   alt="Logo"
@@ -94,8 +97,8 @@ function OurRecentProject() {
             </div>
 
             {/* Text & Action Content */}
-            <div className="flex flex-col items-center justify-center lg:w-[312px] w-[303px] lg:space-y-6 space-y-4">
-              <div className="lg:space-y-5 space-y-3">
+            <div className="flex flex-col items-center justify-center lg:w-[312px] w-[303px] lg:space-y-6 space-y-4 lg:py-2">
+              <div className="space-y-2 ">
                 <motion.p
                   variants={fadeInUp(12, 0.5)}
                   className="font-bold lg:text-[20px] text-[16px] leading-9 text-[#FFFFFF] "
@@ -126,9 +129,9 @@ function OurRecentProject() {
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         viewport={{ once: false, margin: "-60px" }}
         transition={{ type: "spring", stiffness: 180, damping: 20 }}
-        className="Inner-wrapper mx-auto w-full lg:h-[214px] h-[567px] bg-brand-lime rounded-4xl border-4 border-[#FFFFFF] flex lg:flex-row flex-col items-center justify-center p-6"
+        className="Inner-wrapper mx-auto w-full lg:h-53.5 h-141.75 bg-brand-lime rounded-4xl border-4 border-[#FFFFFF] flex lg:flex-row flex-col items-center justify-center p-6"
       >
-        <div className="flex lg:flex-row flex-col items-center justify-between gap-8 w-full max-w-[1100px]">
+        <div className="flex lg:flex-row flex-col items-center justify-between gap-8 w-full max-w-275">
           <Image
             src="/slot_image.svg"
             alt="Our Recent Project Banner"
@@ -137,7 +140,7 @@ function OurRecentProject() {
             className="rounded-4xl"
           />
           <div>
-            <p className="lg:w-[580px] xl:w-[685px] w-[286px] font-normal lg:text-[20px] text-[16px] leading-8 lg:text-left text-center text-slate-900">
+            <p className="lg:w-145 xl:w-171.25 w-71.5 font-normal lg:text-[20px] text-[16px] leading-8 lg:text-left text-center text-slate-900">
               You know exactly what your industry needs. So why isn't your
               product live yet? You're not afraid of the project. You're afraid
               of wasting time and money on something that won't work.
@@ -155,7 +158,7 @@ function OurRecentProject() {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="w-full h-[52px] font-normal text-[14px] font-heading rounded-xl text-brand-lime leading-[100%] border border-[#007FFF] bg-[#007FFF] hover:bg-[#006fde] hover:text-white transition-colors whitespace-nowrap px-4"
+              className="w-full h-13 font-normal text-[14px] font-heading rounded-xl text-brand-lime leading-[100%] border border-[#007FFF] bg-[#007FFF] hover:bg-[#006fde] hover:text-white transition-colors whitespace-nowrap px-4"
             >
               Book Clarity Call Now!
             </motion.button>

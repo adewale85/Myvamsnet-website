@@ -33,7 +33,7 @@ function FAQ() {
   };
 
   return (
-    <section className="Inner-wrapper items-center justify-center py-12">
+    <section className="Inner-wrapper items-center justify-center ">
       <header className="flex lg:flex-row flex-col items-center justify-between py-8">
         <h1 className="lg:w-136.5 w-full font-heading font-normal lg:text-[44px] text-[28px] lg:leading-16.5 leading-10 text-white">
           Questions? <br /> We've Got Answers.
@@ -44,7 +44,7 @@ function FAQ() {
       </header>
 
      
-      <div className="lg:w-300 w-full rounded-3xl bg-[#EEF6FF] flex flex-col items-center justify-center lg:p-8 p-4 gap-4">
+      <div className="lg:w-300 w-full rounded-3xl bg-[#EEF6FF] flex flex-col items-center justify-center lg:p-8 p-4 gap-4 mb-12">
         {faqData.map((faq, index) => {
           const isOpen = openIndex === index;
           return (
