@@ -4,24 +4,24 @@ import { useState } from "react";
 function FAQ() {
   const faqData = [
     {
-      question: "Is my information safe on MyVamsnet?",
-      answer: "Yes, absolutely. We use military-grade encryption, 2FA authentication, and store funds in secure, regulated custodial accounts. Your security is our top priority."
+      question: "What does MyVamsnet do?",
+      answer: "We develop technology solutions, provide growth-focused guidance, and equip people with the skills they need to thrive in the digital world."
     },
     {
-      question: "Can MyVamsnet execute on a tech product project?",
-      answer: "Yes, absolutely. We use military-grade encryption, 2FA authentication, and store funds in secure, regulated custodial accounts. Your security is our top priority."
+      question: "Does MyVamsnet offer partnership opportunities for businesses?",
+      answer: "Yes, MyVamsnet welcomes collaboration with businesses that align with our values and objectives. Feel free to reach out to discuss potential partnership avenues."
     },
     {
-      question: "What countries or industries do you support?",
-      answer: "Yes, absolutely. We use military-grade encryption, 2FA authentication, and store funds in secure, regulated custodial accounts. Your security is our top priority."
+      question: "What if I’m not sure what I need?",
+      answer: "That’s fine. Contact us anyway. We’ll help you figure it out. No charge for that first conversation."
     },
     {
-      question: "Is there customer support if I encounter issues?",
-      answer: "Yes, absolutely. We use military-grade encryption, 2FA authentication, and store funds in secure, regulated custodial accounts. Your security is our top priority."
+      question: "Can you help us choose the right technology for our business?",
+      answer: "Absolutely.We help businesses evaluate options, avoid costly mistakes, and select the most suitable technologies based on their goals, budget, and operational needs."
     },
     {
-      question: "How do I get notified on MyVamsnet’s latest updates?",
-      answer: "Yes, absolutely. We use military-grade encryption, 2FA authentication, and store funds in secure, regulated custodial accounts. Your security is our top priority."
+      question: "How can I be sure that my data is safe with MyVamsnet?",
+      answer: "MyVamsnet employs advanced security protocols, encryption, and access controls to protect your sensitive data from unauthorized access."
     }
   ];
 
