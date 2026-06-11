@@ -8,7 +8,7 @@ function HeroeprojectNames() {
 
   const projectNames = [
     "Miitas",
-    "Eliad Investment",
+    "3trive Lab",
     "SEI Africa",
     "AngyCare UK",
     "Mtrackr",

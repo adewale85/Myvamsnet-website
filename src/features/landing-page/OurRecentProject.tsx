@@ -52,7 +52,7 @@ function OurRecentProject() {
     >
       <header className="pt-8 flex items-center justify-between gap-6 lg:mb-8 ">
         <p className="lg:text-[18px] text-[12px] font-heading font-normal leading-6 text-[#232B33] whitespace-nowrap">
-          OUR RECENT PROJECTS
+          SOME LIVE PROJECTS
         </p>
         <div className="lg:w-262 w-full h-1 bg-[#FFFFFF]"></div>
       </header>

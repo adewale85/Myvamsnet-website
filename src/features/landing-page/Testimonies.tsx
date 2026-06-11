@@ -12,23 +12,23 @@ function Testimonies() {
   const testimonialsData = [
     {
       stars: 5,
-      quote: "Wapx makes trading crypto and paying bills incredibly easy. I don't need multiple apps anymore.",
-      name: "Joshua Idowu",
+      quote: "Everything I ever need in one tech company. Discovering MyVamsnet has been a transformative experience.",
+      name: "Adewale Odusola ",
       role: "Founder, SEI Africa",
       avatarSrc: "/joshua-idowu.svg",
     },
     {
-      stars: 4,
-      quote: "The social media boost and SMS verification features save me hours every week. It was an awesome experience.",
+      stars: 5,
+      quote: "After wasting lots of energy and money on fake tutors. MyVamsnet’s helped me become a confident developer.",
       name: "John Bamikefa",
       role: "Back-end Developer",
       avatarSrc: "/john-bamikefa.svg",
     },
     {
       stars: 5,
-      quote: "Everything I need in one fintech app. The virtual cards and eSIM features are game-changers.",
-      name: "Fredrick Omoniyi",
-      role: "Founder, Angycare Uk",
+      quote: "A big thank you to MyVamsnet. They provided structured, support, and cutting-edge tools, turning my passion into reality.",
+      name: "Damilola Yesifu",
+      role: "Front-end Developer",
       avatarSrc: "/fredrick_omoniyi.svg",
     },
   ];
