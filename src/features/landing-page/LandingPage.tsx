@@ -43,7 +43,7 @@ function LandingPage() {
         <ReadyToBuild />
         </div>
     <div>
-   <Image src="/Lastimage.svg" alt="We Build Image" width={1940} height={514} className='lg:block hidden w-full'/>
+   <Image src="/Lastimage.svg" alt="We Build Image" width={1940} height={514} className='lg:block hidden w-full bg-fixed '/>
 
    <Image src="/MobileLastimage.svg" alt="We Build Image" width={575} height={404} className='lg:hidden w-full h-[404px] object-cover'/>
    

@@ -7,7 +7,7 @@ function TrustedBy() {
   const [isPaused, setIsPaused] = useState(false);
 
   const label = "Trusted by:";
-  const companies = ["Eliad Investment", "SEI Africa", "AngyCare UK", "3trive Lab"];
+  const companies = ["Mtrackr", "Miitas", "SEI Africa", "AngyCare UK", "3trive Lab"];
 
   // Duplicate the company items to make a seamless, infinite loop
   const duplicatedCompanies = [...companies, ...companies, ...companies, ...companies];

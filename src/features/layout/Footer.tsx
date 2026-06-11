@@ -19,12 +19,12 @@ const FOOTER_DATA = [
   },
   {
     title: "Legal",
-    links: ["Privacy Policy", "Terms of Service", "Terms of Service"],
+    links: ["Privacy Policy", "Terms of Service" ],
     widthClass: "col-span-1 w-full lg:w-[232px]"
   },
   {
     title: "Company",
-    links: ["FAQs", "Contact us", "Contact us"],
+    links: ["FAQs", "About us", "Contact us"],
     widthClass: "col-span-1 w-full lg:w-[85px]"
   },
 ];
