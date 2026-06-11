@@ -13,7 +13,7 @@ function OurRecentProject() {
     {
       badge: "3trive Lab",
       description:
-        "MyVamsnet is an impact-driven technology company delivering tech-enabled growth for individuals and businesses across Africa and beyond.",
+        "Your expert techOps team. 3trivelab helps non-technical professionals and businesses turn their expertise into profitable tech products.",
       btnText: "View Project",
       btnIcon: "/Btn.svg",
       imgSrc: "/3trive Lab.svg",
@@ -24,7 +24,7 @@ function OurRecentProject() {
      {
       badge: "Mtrackr",
       description:
-        "MyVamsnet is an impact-driven technology company delivering tech-enabled growth for individuals and businesses across Africa and beyond.",
+        "Manage Your Business Money with Confidence and Ease. Say bye to stress. Organize income, expenses, and all payments in one place, anytime, anywhere.",
       btnText: "View Project",
       btnIcon: "/Btn.svg",
       imgSrc: "/Mtrackr.svg",
@@ -35,7 +35,7 @@ function OurRecentProject() {
     {
       badge: "Angy Care Home",
       description:
-        "MyVamsnet is an impact-driven technology company delivering tech-enabled growth for individuals and businesses across Africa and beyond.",
+        "One secured platform for trusted adult care and trusted healthcare careers. Taking care of your loved one wouldn’t feel uncertain anymore. ",
       btnText: "View Project",
       btnIcon: "/Btn.svg",
       imgSrc: "/Angy Care Home.svg",
