@@ -50,7 +50,7 @@ function FAQ() {
           return (
             <div 
               key={index} 
-              className={`bg-white rounded-2xl overflow-hidden transition-all duration-300 border 
+              className={`w-full bg-white rounded-2xl overflow-hidden transition-all duration-300 border 
                 ${isOpen ? "border-[#007FFF]" : "border-transparent"}`}
             >
               <button

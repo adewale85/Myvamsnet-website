@@ -25,9 +25,9 @@ function HeroeprojectNames() {
   return (
     <div className="overflow-hidden w-full">
       <motion.div
-        className="flex w-max gap-12 items-center cursor-pointer"
+        className="flex w-max gap-18 items-center cursor-pointer"
         style={{ willChange: "transform" }}
-        animate={{ x: isPaused ? undefined : ["-50%", "0%"] }}
+        animate={{ x: isPaused ? undefined : ["-45%", "0%"] }}
         transition={{
           repeat: Infinity,
           duration: 20,

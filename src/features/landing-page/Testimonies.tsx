@@ -14,7 +14,7 @@ function Testimonies() {
       stars: 5,
       quote: "Everything I ever need in one tech company. Discovering MyVamsnet has been a transformative experience.",
       name: "Adewale Odusola ",
-      role: "Founder, SEI Africa",
+      role: "Front-end Developer",
       avatarSrc: "/joshua-idowu.svg",
     },
     {
